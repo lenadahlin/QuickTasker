@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<Shell
+    x:Class="Quick_Tasker.Pages.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Quick_Tasker.Pages"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:DailyView}"
+        Route="MainPage" />
+    <ShellContent
+        Title="New Task"
+        ContentTemplate="{DataTemplate local:NewTask}"
+        Route="NewTask" />
+    <ShellContent
+        Title="Task Bank"
+        ContentTemplate="{DataTemplate local:TaskBank}"
+        Route="TaskBank" />
+    <ShellContent
+        Title="Completed"
+        ContentTemplate="{DataTemplate local:Completed}"
+        Route="Completed" />
+    <ShellContent
+        Title="Calendar"
+        ContentTemplate="{DataTemplate local:Calendar}"
+        Route="Calendar" />
+    <ShellContent
+        Title="Recently Deleted"
+        ContentTemplate="{DataTemplate local:RecentlyDeleted}"
+        Route="RecentlyDeleted" />
+</Shell>

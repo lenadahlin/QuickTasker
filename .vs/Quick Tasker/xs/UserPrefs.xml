@@ -1,0 +1,54 @@
+﻿<Properties StartupConfiguration="{5399F89B-0C23-44B3-8B45-C5BCA46583DF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Quick Tasker/Pages/Calendar.xaml">
+    <Files>
+      <File FileName="Quick Tasker/MainPage.xaml.cs" />
+      <File FileName="Quick Tasker/MainPage.xaml" />
+      <File FileName="Quick Tasker/Pages/DailyView.xaml" />
+      <File FileName="Quick Tasker/Pages/DailyView.xaml.cs" />
+      <File FileName="../../../../../usr/local/share/dotnet/packs/Microsoft.iOS.Sdk/16.4.7098/tools/msbuild/iOS/Xamarin.Shared.targets" />
+      <File FileName="Quick Tasker/App.xaml" />
+      <File FileName="Quick Tasker/App.xaml.cs" />
+      <File FileName="Quick Tasker/MauiProgram.cs" />
+      <File FileName="Quick Tasker/Helpers/FontAwesomeHelperSolid.cs" />
+      <File FileName="Quick Tasker/Resources/Styles/Styles.xaml" />
+      <File FileName="Quick Tasker/Resources/Styles/Colors.xaml" />
+      <File FileName="Quick Tasker/Pages/NewTask.xaml" />
+      <File FileName="Quick Tasker/Pages/NewTask.xaml.cs" />
+      <File FileName="Quick Tasker/Pages/AppShell.xaml" />
+      <File FileName="Quick Tasker/Pages/AppShell.xaml.cs" />
+      <File FileName="Quick Tasker/Pages/TaskBank.xaml" />
+      <File FileName="Quick Tasker/Pages/TaskBank.xaml.cs" />
+      <File FileName="Quick Tasker/Pages/Completed.xaml" />
+      <File FileName="Quick Tasker/Pages/Completed.xaml.cs" />
+      <File FileName="Quick Tasker/Pages/Calendar.xaml" Line="13" Column="1" />
+      <File FileName="Quick Tasker/Pages/RecentlyDeleted.xaml" />
+      <File FileName="Quick Tasker/Pages/Calendar.xaml.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Quick Tasker" expanded="True">
+            <Node name="Quick Tasker">
+              <Node name="Pages" expanded="True">
+                <Node name="Calendar.xaml" selected="True" />
+              </Node>
+              <Node name="Resources" expanded="True">
+                <Node name="Styles" expanded="True" />
+              </Node>
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.68" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Quick_220Tasker PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+</Properties>

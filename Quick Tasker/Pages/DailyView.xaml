@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quick_Tasker.Pages.DailyView"
+             xmlns:helper="clr-namespace:Quick_Tasker.Helpers"
+             Title="Daily View">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <ImageButton x:Name="Menu"
+                     VerticalOptions="Start"
+                     HorizontalOptions="Start"
+                     Grid.Column="0"
+                     Clicked="OpenFlyout">
+            <ImageButton.Source>
+                <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.Star}" Color="Black" />
+            </ImageButton.Source>
+        </ImageButton>
+        <Label x:Name="CurrentDate"
+            Text="date"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="32"
+            VerticalOptions="Start" 
+            HorizontalOptions="CenterAndExpand"
+            Grid.Column="1"/>
+
+
+        <ImageButton x:Name="AddTask"
+                     VerticalOptions="Start"
+                     HorizontalOptions="End"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     Grid.Column="2"
+                     Clicked="NewTaskClicked">
+            <ImageButton.Source>
+                <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.Plus}" Color="Black" />
+            </ImageButton.Source>
+        </ImageButton>
+    </Grid>
+</ContentPage>
