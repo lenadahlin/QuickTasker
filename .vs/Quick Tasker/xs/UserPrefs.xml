@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{5399F89B-0C23-44B3-8B45-C5BCA46583DF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Quick Tasker/Pages/Calendar.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Quick Tasker/Pages/Calendar.xaml.cs">
     <Files>
       <File FileName="Quick Tasker/MainPage.xaml.cs" />
       <File FileName="Quick Tasker/MainPage.xaml" />
@@ -22,15 +22,17 @@
       <File FileName="Quick Tasker/Pages/Completed.xaml.cs" />
       <File FileName="Quick Tasker/Pages/Calendar.xaml" Line="13" Column="1" />
       <File FileName="Quick Tasker/Pages/RecentlyDeleted.xaml" />
-      <File FileName="Quick Tasker/Pages/Calendar.xaml.cs" />
+      <File FileName="Quick Tasker/Pages/Calendar.xaml.cs" Line="8" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Quick Tasker" expanded="True">
-            <Node name="Quick Tasker">
+          <Node name="Quick Tasker">
+            <Node name="Quick Tasker" expanded="True">
               <Node name="Pages" expanded="True">
-                <Node name="Calendar.xaml" selected="True" />
+                <Node name="Calendar.xaml" expanded="True">
+                  <Node name="Calendar.xaml.cs" selected="True" />
+                </Node>
               </Node>
               <Node name="Resources" expanded="True">
                 <Node name="Styles" expanded="True" />
