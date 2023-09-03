@@ -7,9 +7,10 @@ namespace Quick_Tasker.Models
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateOnly DueDate { get; set; }
-        public DateOnly AssignedDate { get; set; }
-        public TimeOnly EstimatedTime { get; set; }
-        public DateOnly CompletedDate { get; set; }
+        public DateTime? DueDate { get; set; }
+        public DateTime? AssignedDate { get; set; }
+        public TimeSpan? EstimatedTime { get; set; }
+        public DateTime? CompletedDate { get; set; }
+
     }
 }

@@ -10,16 +10,17 @@
             Text="Name:"
             FontAttributes="Bold"/>
         <Entry
+            x:Name="NameEntry"
             BackgroundColor="White"
             Background="White"
             Placeholder="Name"/>
         <HorizontalStackLayout>
-        <!--Due Date-->
-        <Label
+            <!--Due Date-->
+            <Label
             VerticalOptions="Center"
             Text="Due Date:"
             FontAttributes="Bold"/>
-        <Switch
+            <Switch
             x:Name="DueDateSwitch"
             VerticalOptions="Center"
             Toggled="DueDateSwitch_Toggled"/>
@@ -30,12 +31,12 @@
             IsEnabled="False"
             IsVisible="False"/>
         <HorizontalStackLayout>
-        <!--Assigned Date-->
-        <Label
+            <!--Assigned Date-->
+            <Label
             VerticalOptions="Center"
             Text="Assigned Date:"
             FontAttributes="Bold"/>
-        <Switch
+            <Switch
             x:Name="AssignedDateSwitch"
             VerticalOptions="Center"
             Toggled="AssignedDateSwitch_Toggled"/>
@@ -45,21 +46,25 @@
             Format="dd/MM/yyyy"
             IsEnabled="False"
             IsVisible="False"/>
-                <HorizontalStackLayout>
-        <!--Assigned Date-->
-        <Label
+        <HorizontalStackLayout>
+            <!--Assigned Date-->
+            <Label
             VerticalOptions="Center"
             Text="Estimated Time:"
             FontAttributes="Bold"/>
-        <Switch
+            <Switch
             x:Name="EstimatedTimeSwitch"
             VerticalOptions="Center"
             Toggled="EstimatedTimeSwitch_Toggled"/>
         </HorizontalStackLayout>
         <TimePicker
             x:Name="EstimatedTimeEntry"
-            Format="hh:mm"
+            Format="HH:mm"
             IsEnabled="False"
             IsVisible="False"/>
+        <Button
+            x:Name="SaveButton"
+            Text="Save"
+            Clicked="SaveButton_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
