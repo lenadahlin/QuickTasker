@@ -24,6 +24,18 @@ namespace Quick_Tasker.ViewModels
             }
         }
 
+        //TODO have nulls at the end of the list
+        public List<Tasks> GetTasksByDueDate
+        {
+            get
+            {
+                return connection.Table<Tasks>().OrderBy(x => x.DueDate).ToList();
+
+            }
+        }
+
+
+
         public void SaveTask(Tasks model)
         {
             //If it has an Id, then it already exists and we can update it

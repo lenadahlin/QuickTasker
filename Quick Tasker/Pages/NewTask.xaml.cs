@@ -28,7 +28,7 @@ public partial class NewTask : ContentPage
 
     private async void SaveButton_Clicked(object sender, EventArgs e)
     {
-        TaskViewModel taskViewModel = new TaskViewModel();
+        _ = new TaskViewModel();
         //date and times from entries need to be converted
         //all are null if not enabled
         DateTime? dueDateOnly = null;
