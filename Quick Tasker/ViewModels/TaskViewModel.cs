@@ -34,8 +34,6 @@ namespace Quick_Tasker.ViewModels
             }
         }
 
-
-
         public void SaveTask(Tasks model)
         {
             //If it has an Id, then it already exists and we can update it

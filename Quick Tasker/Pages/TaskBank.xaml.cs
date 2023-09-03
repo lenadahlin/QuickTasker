@@ -28,7 +28,7 @@ public partial class TaskBank : ContentPage
                 // if checkbox is un-checked, change CompletedDate to null
                 task.CompletedDate = null;
             }
-            viewModel.SaveTask(task);
+            TaskViewModel.Current.SaveTask(task);
         }
     }
 }
