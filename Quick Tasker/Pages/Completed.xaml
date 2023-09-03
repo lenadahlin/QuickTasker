@@ -3,10 +3,93 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Quick_Tasker.Pages.Completed"
              Title="Completed">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView
+        VerticalOptions="FillAndExpand">
+        <VerticalStackLayout
+            Margin="20">
+            <ListView
+                x:Name="TaskBankView"
+                SelectionMode="None"
+                ItemsSource="{Binding Tasks}"
+                HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <HorizontalStackLayout
+                                HorizontalOptions="FillAndExpand">
+                                <VerticalStackLayout>
+                                    <Label
+                                    Text="{Binding Name}"
+                                    FontAttributes="Bold"/>
+                                    <Label>
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding FormattedDueDate}" Value="">
+                                                <Setter Property="IsVisible" Value="false"/>
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text ="Due: "
+                                                  FontAttributes="Bold" />
+                                                <Span Text="{Binding FormattedDueDate}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                    <Label>
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding FormattedAssignedDate}" Value="">
+                                                <Setter Property="IsVisible" Value="false"/>
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text ="Assigned: "
+                                                  FontAttributes="Bold" />
+                                                <Span Text="{Binding FormattedAssignedDate}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label>
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding FormattedEstimatedTime}" Value="">
+                                                <Setter Property="IsVisible" Value="false"/>
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text ="Estimated Time: "
+                                                  FontAttributes="Bold" />
+                                                <Span Text="{Binding FormattedEstimatedTime}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label>
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding FormattedCompletedDate}" Value="">
+                                                <Setter Property="IsVisible" Value="false"/>
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text ="Completed:"
+                                                  FontAttributes="Bold" />
+                                                <Span Text="{Binding FormattedCompletedDate}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+
+                                </VerticalStackLayout>
+                                <CheckBox
+                                    x:Name="CompletedBox"
+                                    IsChecked="{Binding CompletedDate}"
+                                    CheckedChanged="CheckedComplete"
+                                    HorizontalOptions="EndAndExpand"/>
+                            </HorizontalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

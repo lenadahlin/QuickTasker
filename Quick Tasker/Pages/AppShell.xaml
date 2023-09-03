@@ -8,7 +8,7 @@
     Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
-        Title="Home"
+        Title="Daily View"
         ContentTemplate="{DataTemplate local:DailyView}"
         Route="MainPage" />
     <ShellContent
