@@ -4,7 +4,6 @@ public partial class Calendar : ContentPage
 {
 	public Calendar()
 	{
-		// test hi bud
 		InitializeComponent();
 	}
 }

@@ -4,9 +4,62 @@
              x:Class="Quick_Tasker.Pages.NewTask"
              Title="New Task">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <!--Name-->
+        <Label
+            VerticalOptions="Center"
+            Text="Name:"
+            FontAttributes="Bold"/>
+        <Entry
+            BackgroundColor="White"
+            Background="White"
+            Placeholder="Name"/>
+        <HorizontalStackLayout>
+        <!--Due Date-->
+        <Label
+            VerticalOptions="Center"
+            Text="Due Date:"
+            FontAttributes="Bold"/>
+        <Switch
+            x:Name="DueDateSwitch"
+            VerticalOptions="Center"
+            Toggled="DueDateSwitch_Toggled"/>
+        </HorizontalStackLayout>
+        <DatePicker
+            x:Name="DueDateEntry"
+            Format="dd/MM/yyyy"
+            IsEnabled="False"
+            IsVisible="False"/>
+        <HorizontalStackLayout>
+        <!--Assigned Date-->
+        <Label
+            VerticalOptions="Center"
+            Text="Assigned Date:"
+            FontAttributes="Bold"/>
+        <Switch
+            x:Name="AssignedDateSwitch"
+            VerticalOptions="Center"
+            Toggled="AssignedDateSwitch_Toggled"/>
+        </HorizontalStackLayout>
+        <DatePicker
+            x:Name="AssignedDateEntry"
+            Format="dd/MM/yyyy"
+            IsEnabled="False"
+            IsVisible="False"/>
+                <HorizontalStackLayout>
+        <!--Assigned Date-->
+        <Label
+            VerticalOptions="Center"
+            Text="Estimated Time:"
+            FontAttributes="Bold"/>
+        <Switch
+            x:Name="EstimatedTimeSwitch"
+            VerticalOptions="Center"
+            Toggled="EstimatedTimeSwitch_Toggled"/>
+        </HorizontalStackLayout>
+        <TimePicker
+            x:Name="EstimatedTimeEntry"
+            Format="hh:mm"
+            IsEnabled="False"
+            IsVisible="False"/>
     </VerticalStackLayout>
 </ContentPage>

@@ -2989,3 +2989,10 @@
 /Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/obj/Debug/net7.0-android/stamp/_GenerateJavaStubs.stamp
 /Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/obj/Debug/net7.0-android/stamp/_GeneratePackageManagerJava.stamp
 /Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/obj/Debug/net7.0-android/stamp/_ResolveLibraryProjectImports.stamp
+/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/obj/Debug/net7.0-android/android/assets/SQLite-net.dll
+/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/obj/Debug/net7.0-android/android/assets/SQLitePCLRaw.batteries_v2.dll
+/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/obj/Debug/net7.0-android/android/assets/SQLitePCLRaw.core.dll
+/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/obj/Debug/net7.0-android/android/assets/SQLitePCLRaw.lib.e_sqlite3.android.dll
+/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/obj/Debug/net7.0-android/android/assets/SQLitePCLRaw.nativelibrary.dll
+/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/obj/Debug/net7.0-android/android/assets/SQLitePCLRaw.provider.dynamic_cdecl.dll
+/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/obj/Debug/net7.0-android/android/assets/SQLitePCLRaw.provider.e_sqlite3.dll
