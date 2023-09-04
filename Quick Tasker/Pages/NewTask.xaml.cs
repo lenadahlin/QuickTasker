@@ -67,11 +67,20 @@ public partial class NewTask : ContentPage
                 DueDate = dueDateOnly,
                 AssignedDate = assignedDateOnly,
                 EstimatedTime = estimatedTimeOnly,
-                CompletedDate = null // null until completed
+                CompletedDate = null, // null until completed
+                CompletedStatus = false
             };
-            // Save the task to the database
+            //save to database
             TaskViewModel.Current.SaveTask(newTask);
-            await Navigation.PopAsync();
+
+            if (Navigation.NavigationStack.Count > 1)
+            {
+                await Navigation.PopAsync();
+            } else
+            {
+                await Shell.Current.GoToAsync("//TaskBank");
+            }
+            
         }
     }
 }

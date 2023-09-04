@@ -13,22 +13,32 @@ public partial class TaskBank : ContentPage
         BindingContext = viewModel = new TaskViewModel();
         InitializeComponent();
     }
-    //TODO checking as complete is updating the date for EVERY task 
+    //refreshes tasks whenever page opens
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        TaskBankView.ItemsSource = viewModel.GetUncompletedTasks;
+    }
+
+
     private void CheckedComplete(object sender, CheckedChangedEventArgs e)
     {
+
         if (sender is CheckBox checkBox && checkBox.BindingContext is Tasks task)
         {
-            if (e.Value)
+            if (task.CompletedStatus && task.CompletedDate == null)
             {
                 // if checkbox is checked, change CompletedDate to today
                 task.CompletedDate = DateTime.Now;
+                viewModel.SaveTask(task);
             }
-            else
+            else if (!task.CompletedStatus && task.CompletedDate != null)
             {
                 // if checkbox is un-checked, change CompletedDate to null
                 task.CompletedDate = null;
+                viewModel.SaveTask(task);
             }
-            TaskViewModel.Current.SaveTask(task);
+            TaskBankView.ItemsSource = viewModel.GetUncompletedTasks;
         }
     }
 }

@@ -11,10 +11,12 @@
         Title="Daily View"
         ContentTemplate="{DataTemplate local:DailyView}"
         Route="MainPage" />
+    <FlyoutItem Title="New Task">
     <ShellContent
         Title="New Task"
         ContentTemplate="{DataTemplate local:NewTask}"
         Route="NewTask" />
+    </FlyoutItem>
     <ShellContent
         Title="Task Bank"
         ContentTemplate="{DataTemplate local:TaskBank}"

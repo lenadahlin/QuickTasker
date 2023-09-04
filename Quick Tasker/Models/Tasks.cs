@@ -13,6 +13,7 @@ namespace Quick_Tasker.Models
         public DateTime? AssignedDate { get; set; }
         public TimeSpan? EstimatedTime { get; set; }
         public DateTime? CompletedDate { get; set; }
+        public bool CompletedStatus { get; set; }
 
         //formatting dates and times for pages
         [Ignore] //formatting Due Date

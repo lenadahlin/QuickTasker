@@ -1,11 +1,13 @@
 ﻿using Quick_Tasker.Models;
 using Quick_Tasker.Services;
+using System.ComponentModel;
 using SQLite;
 
 namespace Quick_Tasker.ViewModels
 {
-    internal class TaskViewModel : ObservableObject
+    internal class TaskViewModel 
     {
+        //public event PropertyChangedEventHandler PropertyChanged;
         public static TaskViewModel Current { get; set; }
 
         SQLiteConnection connection;
@@ -25,11 +27,19 @@ namespace Quick_Tasker.ViewModels
         }
 
         //TODO have nulls at the end of the list
-        public List<Tasks> GetTasksByDueDate
+        public List<Tasks> GetUncompletedTasks
         {
             get
             {
-                return connection.Table<Tasks>().OrderBy(x => x.DueDate).ToList();
+                return connection.Table<Tasks>().Where(task => !task.CompletedStatus).OrderBy(x => x.DueDate).ToList();
+
+            }
+        }
+        public List<Tasks> GetCompletedTasks
+        {
+            get
+            {
+                return connection.Table<Tasks>().Where(task => task.CompletedStatus).OrderByDescending(x => x.CompletedDate).ToList();
 
             }
         }
@@ -40,11 +50,13 @@ namespace Quick_Tasker.ViewModels
             if (model.Id > 0)
             {
                 connection.Update(model);
+               // PropertyChanged(this, new PropertyChangedEventArgs("Tasks"));
             }
             //If not, it's new and we need to add it
             else
             {
                 connection.Insert(model);
+              //  PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tasks"));
             }
         }
 

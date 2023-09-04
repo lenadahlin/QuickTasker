@@ -10,7 +10,7 @@
             <ListView
                 x:Name="TaskBankView"
                 SelectionMode="None"
-                ItemsSource="{Binding Tasks}"
+                ItemsSource="{Binding GetUncompletedTasks}"
                 HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -68,7 +68,7 @@
                                 </VerticalStackLayout>
                                 <CheckBox
                                     x:Name="CompletedBox"
-                                    IsChecked="{Binding CompletedDate}"
+                                    IsChecked="{Binding CompletedStatus}"
                                     CheckedChanged="CheckedComplete"
                                     HorizontalOptions="EndAndExpand"/>
                             </HorizontalStackLayout>

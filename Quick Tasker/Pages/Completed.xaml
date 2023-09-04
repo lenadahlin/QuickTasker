@@ -10,13 +10,13 @@
             <ListView
                 x:Name="TaskBankView"
                 SelectionMode="None"
-                ItemsSource="{Binding Tasks}"
+                ItemsSource="{Binding GetCompletedTasks}"
                 HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <HorizontalStackLayout
-                                HorizontalOptions="FillAndExpand">
+                                HorizontalOptions="StartAndExpand">
                                 <VerticalStackLayout>
                                     <Label
                                     Text="{Binding Name}"
@@ -78,13 +78,13 @@
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
-
                                 </VerticalStackLayout>
                                 <CheckBox
                                     x:Name="CompletedBox"
-                                    IsChecked="{Binding CompletedDate}"
+                                    IsChecked="{Binding CompletedStatus}"
                                     CheckedChanged="CheckedComplete"
-                                    HorizontalOptions="EndAndExpand"/>
+                                    HorizontalOptions="End"
+                                    VerticalOptions="CenterAndExpand"/>
                             </HorizontalStackLayout>
                         </ViewCell>
                     </DataTemplate>
