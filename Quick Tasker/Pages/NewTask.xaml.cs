@@ -1,6 +1,8 @@
 ﻿namespace Quick_Tasker.Pages;
 using Quick_Tasker.ViewModels;
 using Quick_Tasker.Models;
+using AndroidX.Lifecycle;
+
 public partial class NewTask : ContentPage
 {
     public NewTask()
@@ -8,19 +10,36 @@ public partial class NewTask : ContentPage
         InitializeComponent();
     }
 
+    //clears any text/dates and sets switches to false
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        NameEntry.Text = "";
+        DueDateEntry.Date = DateTime.Now;
+        DueDateSwitch.IsToggled = false;
+        AssignedDateEntry.Date = DateTime.Now;
+        AssignedDateSwitch.IsToggled = false;
+        EstimatedTimeEntry.Time = TimeSpan.Zero;
+        EstimatedTimeSwitch.IsToggled = false;
+        //DueDateEntry.IsEnabled = false;
+    }
+
     //Task information toggles
     private void DueDateSwitch_Toggled(object sender, ToggledEventArgs e)
     {
+        DueDateEntry.Date = DateTime.Now;
         DueDateEntry.IsEnabled = e.Value;
         DueDateEntry.IsVisible = e.Value;
     }
     private void AssignedDateSwitch_Toggled(object sender, ToggledEventArgs e)
     {
+        AssignedDateEntry.Date = DateTime.Now;
         AssignedDateEntry.IsEnabled = e.Value;
         AssignedDateEntry.IsVisible = e.Value;
     }
     private void EstimatedTimeSwitch_Toggled(object sender, ToggledEventArgs e)
     {
+        EstimatedTimeEntry.Time = TimeSpan.Zero;
         EstimatedTimeEntry.IsEnabled = e.Value;
         EstimatedTimeEntry.IsVisible = e.Value;
     }
@@ -58,6 +77,21 @@ public partial class NewTask : ContentPage
             await DisplayAlert("Warning", "Tasks must have a name", "OK");
             return;
         }
+        if (EstimatedTimeEntry.Time == TimeSpan.Zero && EstimatedTimeSwitch.IsToggled == true)
+        {
+            await DisplayAlert("Warning", "Time must not be 0", "OK");
+            return;
+        }
+        if (AssignedDateEntry.Date > DueDateEntry.Date)
+        {
+            await DisplayAlert("Warning", "Assigned date must be after the due date", "OK");
+            return;
+        }
+        if (AssignedDateEntry.Date < DateTime.Today || DueDateEntry.Date < DateTime.Today)
+        {
+            await DisplayAlert("Warning", "Dates must be on or after today", "OK");
+            return;
+        }
         else
         {
             //constructor
@@ -72,7 +106,10 @@ public partial class NewTask : ContentPage
             };
             //save to database
             TaskViewModel.Current.SaveTask(newTask);
-
+            //NameEntry.Text = string.Empty;
+            //AssignedDateEntry.Date = default;
+            //DueDateEntry.Date = default;
+            //EstimatedTimeEntry = default;
             if (Navigation.NavigationStack.Count > 1)
             {
                 await Navigation.PopAsync();
