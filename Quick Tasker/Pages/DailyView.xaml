@@ -4,18 +4,15 @@
              x:Class="Quick_Tasker.Pages.DailyView"
              xmlns:helper="clr-namespace:Quick_Tasker.Helpers"
              Title="Daily View">
+    <VerticalStackLayout>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <ImageButton Grid.Row="0"
-                     Grid.Column="0"
+        <ImageButton Grid.Column="0"
                      x:Name="Left"
                      VerticalOptions="Start"
                      HorizontalOptions="Start"
@@ -25,16 +22,15 @@
             </ImageButton.Source>
         </ImageButton>
 
-        <Label Grid.Row="0"
-                   Grid.Column="1"
-                x:Name="CurrentDate"
+        <Label Grid.Column="1"
+            x:Name="CurrentDate"
             Text="date"
             SemanticProperties.HeadingLevel="Level1"
             FontSize="Title"
             FontAttributes="Bold"
             VerticalOptions="Start" 
             HorizontalOptions="CenterAndExpand"/>
-        <ImageButton Grid.Row="0"
+        <ImageButton 
                      Grid.Column="2"
             x:Name="Right"
                      VerticalOptions="Start"
@@ -44,8 +40,7 @@
                 <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.ArrowRight}" Color="Black" />
             </ImageButton.Source>
         </ImageButton>
-        </Grid>
-
+</Grid>
         <ListView
                 x:Name="DailyListView"
                 SelectionMode="None"
@@ -57,9 +52,6 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid HorizontalOptions="FillAndExpand">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="auto"/>
@@ -132,12 +124,13 @@
                                     IsChecked="{Binding CompletedStatus}"
                                     CheckedChanged="CheckedComplete"
                                     HorizontalOptions="End"
-                                    VerticalOptions="Center"
-                                    />
+                                    VerticalOptions="Center"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+    </VerticalStackLayout>
 </ContentPage>
 
