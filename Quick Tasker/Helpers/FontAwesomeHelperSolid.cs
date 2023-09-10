@@ -12,6 +12,8 @@ namespace Quick_Tasker.Helpers
         public const string AlignJustify = "\uf039";
         public const string ListUl = "\uf0ca";
         public const string Trash = "\uf1f8";
+        public const string ArrowLeft = "\u2190";
+        public const string ArrowRight = "\u2192";
     }
 }
 

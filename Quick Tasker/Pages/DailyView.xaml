@@ -9,16 +9,45 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackLayout Grid.Row="0">
-            <Label x:Name="CurrentDate"
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ImageButton Grid.Row="0"
+                     Grid.Column="0"
+                     x:Name="Left"
+                     VerticalOptions="Start"
+                     HorizontalOptions="Start"
+                     Clicked="DecreaseDate">
+            <ImageButton.Source>
+                <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.ArrowLeft}" Color="Black" />
+            </ImageButton.Source>
+        </ImageButton>
+
+        <Label Grid.Row="0"
+                   Grid.Column="1"
+                x:Name="CurrentDate"
             Text="date"
             SemanticProperties.HeadingLevel="Level1"
             FontSize="Title"
             FontAttributes="Bold"
             VerticalOptions="Start" 
             HorizontalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <ImageButton Grid.Row="0"
+                     Grid.Column="2"
+            x:Name="Right"
+                     VerticalOptions="Start"
+                     HorizontalOptions="End"
+                     Clicked="IncreaseDate">
+            <ImageButton.Source>
+                <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.ArrowRight}" Color="Black" />
+            </ImageButton.Source>
+        </ImageButton>
+
         <ScrollView Grid.Row="1"
+                    Grid.ColumnSpan="3"
+                    Grid.Column="0"
         VerticalOptions="FillAndExpand">
             <VerticalStackLayout
             Margin="20">
@@ -94,64 +123,18 @@
                                             </Label.FormattedText>
                                         </Label>
                                     </VerticalStackLayout>
-                                    <CheckBox
+                                    <CheckBox Grid.Column="2"
                                     x:Name="CompletedBox"
                                     IsChecked="{Binding CompletedStatus}"
                                     CheckedChanged="CheckedComplete"
-                                    HorizontalOptions="End"
+                                    HorizontalOptions="EndAndExpand"
                                     VerticalOptions="CenterAndExpand"/>
                                 </HorizontalStackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                        <Button Text="Click to Change Date!"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="Center"
-                Clicked="IncreaseDate"/>
             </VerticalStackLayout>
         </ScrollView>
     </Grid>
 </ContentPage>
-
-
-<!-- image button version of header which is not great
-<Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-        <ImageButton x:Name="Menu"
-                     VerticalOptions="Start"
-                     HorizontalOptions="Start"
-                     Grid.Column="0"
-                     Clicked="OpenFlyout">
-            <ImageButton.Source>
-                <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.Star}" Color="Black" />
-            </ImageButton.Source>
-        </ImageButton>
-        <Label x:Name="CurrentDate"
-            Text="date"
-            SemanticProperties.HeadingLevel="Level1"
-            FontSize="32"
-            VerticalOptions="Start" 
-            HorizontalOptions="CenterAndExpand"
-            Grid.Column="1"/>
-
-
-        <ImageButton x:Name="AddTask"
-                     VerticalOptions="Start"
-                     HorizontalOptions="End"
-                     WidthRequest="100"
-                     HeightRequest="100"
-                     Grid.Column="2"
-                     Clicked="NewTaskClicked">
-            <ImageButton.Source>
-                <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.Plus}" Color="Black" />
-            </ImageButton.Source>
-        </ImageButton>
-    </Grid>-->

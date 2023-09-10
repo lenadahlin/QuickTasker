@@ -17,7 +17,12 @@ public partial class DailyView : ContentPage
         DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
         //NavigationPage.SetHasNavigationBar(this, false);
     }
-
+    //refreshes tasks whenever page opens
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
+    }
     private void CheckedComplete(object sender, CheckedChangedEventArgs e)
     {
 
@@ -28,14 +33,14 @@ public partial class DailyView : ContentPage
                 // if checkbox is checked, change CompletedDate to today
                 task.CompletedDate = DateTime.Now;
                 viewModel.SaveTask(task);
-                DailyListView.ItemsSource = viewModel.GetCompletedTasks;
+                DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
             }
             else if (!task.CompletedStatus && task.CompletedDate != null)
             {
                 // if checkbox is un-checked, change CompletedDate to null
                 task.CompletedDate = null;
                 viewModel.SaveTask(task);
-                DailyListView.ItemsSource = viewModel.GetCompletedTasks;
+                DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
             }
         }
     }
@@ -43,6 +48,14 @@ public partial class DailyView : ContentPage
     {
         //setting date for label and database stuff
         currentDate = currentDate.AddDays(1);
+        string formattedDate = currentDate.ToString("dddd\n d MMMM");
+        CurrentDate.Text = formattedDate;
+        DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
+    }
+    private void DecreaseDate(object sender, EventArgs args)
+    {
+        //setting date for label and database stuff
+        currentDate = currentDate.AddDays(-1);
         string formattedDate = currentDate.ToString("dddd\n d MMMM");
         CurrentDate.Text = formattedDate;
         DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
