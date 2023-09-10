@@ -1,47 +1,52 @@
 ﻿<Properties StartupConfiguration="{5399F89B-0C23-44B3-8B45-C5BCA46583DF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Quick Tasker/Models/Tasks.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Quick Tasker/Pages/NewTask.xaml.cs">
     <Files>
       <File FileName="Quick Tasker/MainPage.xaml.cs" />
       <File FileName="Quick Tasker/MainPage.xaml" />
-      <File FileName="Quick Tasker/Pages/DailyView.xaml" />
-      <File FileName="Quick Tasker/Pages/DailyView.xaml.cs" />
+      <File FileName="Quick Tasker/Pages/DailyView.xaml" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Pages/DailyView.xaml.cs" Line="1" Column="1" />
       <File FileName="../../../../../usr/local/share/dotnet/packs/Microsoft.iOS.Sdk/16.4.7098/tools/msbuild/iOS/Xamarin.Shared.targets" />
       <File FileName="Quick Tasker/App.xaml" />
       <File FileName="Quick Tasker/App.xaml.cs" />
       <File FileName="Quick Tasker/MauiProgram.cs" />
-      <File FileName="Quick Tasker/Helpers/FontAwesomeHelperSolid.cs" />
-      <File FileName="Quick Tasker/Resources/Styles/Styles.xaml" />
-      <File FileName="Quick Tasker/Resources/Styles/Colors.xaml" />
-      <File FileName="Quick Tasker/Pages/NewTask.xaml" />
-      <File FileName="Quick Tasker/Pages/NewTask.xaml.cs" />
-      <File FileName="Quick Tasker/Pages/AppShell.xaml" />
-      <File FileName="Quick Tasker/Pages/AppShell.xaml.cs" />
-      <File FileName="Quick Tasker/Pages/TaskBank.xaml.cs" />
+      <File FileName="Quick Tasker/Helpers/FontAwesomeHelperSolid.cs" Line="9" Column="43" />
+      <File FileName="Quick Tasker/Resources/Styles/Styles.xaml" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Resources/Styles/Colors.xaml" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Pages/NewTask.xaml" Line="40" Column="39" />
+      <File FileName="Quick Tasker/Pages/NewTask.xaml.cs" Line="42" Column="49" />
+      <File FileName="Quick Tasker/Pages/AppShell.xaml" Line="17" Column="40" />
+      <File FileName="Quick Tasker/Pages/AppShell.xaml.cs" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Pages/TaskBank.xaml.cs" Line="16" Column="1" />
       <File FileName="Quick Tasker/Pages/Completed.xaml" />
-      <File FileName="Quick Tasker/Pages/Completed.xaml.cs" />
+      <File FileName="Quick Tasker/Pages/Completed.xaml.cs" Line="1" Column="1" />
       <File FileName="Quick Tasker/Pages/Calendar.xaml" />
       <File FileName="Quick Tasker/Pages/RecentlyDeleted.xaml" />
       <File FileName="Quick Tasker/Pages/Calendar.xaml.cs" />
-      <File FileName="Quick Tasker/Services/DatabaseService.cs" />
-      <File FileName="Quick Tasker/Models/ObservableObject.cs" />
+      <File FileName="Quick Tasker/Services/DatabaseService.cs" Line="33" Column="18" />
+      <File FileName="Quick Tasker/Models/ObservableObject.cs" Line="1" Column="1" />
       <File FileName="Quick Tasker/Models/Tasks.cs" Line="16" Column="50" />
-      <File FileName="Quick Tasker/ViewModels/TaskViewModel.cs" />
-      <File FileName="Quick Tasker/Pages/TaskBank.xaml" />
+      <File FileName="Quick Tasker/ViewModels/TaskViewModel.cs" Line="34" Column="1" />
+      <File FileName="Quick Tasker/Pages/TaskBank.xaml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Quick Tasker" expanded="True">
+          <Node name="Quick Tasker">
             <Node name="Quick Tasker" expanded="True">
+              <Node name="Helpers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
                 <Node name="AppShell.xaml" expanded="True" />
                 <Node name="Completed.xaml" expanded="True" />
+                <Node name="DailyView.xaml" expanded="True" />
                 <Node name="NewTask.xaml" expanded="True" />
                 <Node name="TaskBank.xaml" expanded="True" />
               </Node>
               <Node name="Platforms" expanded="True" />
               <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="Styles" expanded="True" />
+              </Node>
               <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="App.xaml" expanded="True" />

@@ -1,8 +1,6 @@
 ﻿using AndroidX.Lifecycle;
 using Quick_Tasker.ViewModels;
 using Quick_Tasker.Models;
-
-
 namespace Quick_Tasker.Pages;
 
 public partial class Completed : ContentPage
@@ -17,7 +15,7 @@ public partial class Completed : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        TaskBankView.ItemsSource = viewModel.GetCompletedTasks;
+        CompletedView.ItemsSource = viewModel.GetCompletedTasks;
     }
 
     private void CheckedComplete(object sender, CheckedChangedEventArgs e)
@@ -30,14 +28,14 @@ public partial class Completed : ContentPage
                 // if checkbox is checked, change CompletedDate to today
                 task.CompletedDate = DateTime.Now;
                 viewModel.SaveTask(task);
-                TaskBankView.ItemsSource = viewModel.GetCompletedTasks;
+                CompletedView.ItemsSource = viewModel.GetCompletedTasks;
             }
             else if (!task.CompletedStatus && task.CompletedDate != null)
             {
                 // if checkbox is un-checked, change CompletedDate to null
                 task.CompletedDate = null;
                 viewModel.SaveTask(task);
-                TaskBankView.ItemsSource = viewModel.GetCompletedTasks;
+                CompletedView.ItemsSource = viewModel.GetCompletedTasks;
             }
         }
     }

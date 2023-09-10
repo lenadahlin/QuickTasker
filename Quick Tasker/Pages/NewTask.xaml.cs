@@ -82,7 +82,7 @@ public partial class NewTask : ContentPage
             await DisplayAlert("Warning", "Time must not be 0", "OK");
             return;
         }
-        if (AssignedDateEntry.Date > DueDateEntry.Date)
+        if (AssignedDateEntry.Date > DueDateEntry.Date && AssignedDateSwitch.IsToggled == true && DueDateSwitch.IsToggled == true)
         {
             await DisplayAlert("Warning", "Assigned date must be after the due date", "OK");
             return;

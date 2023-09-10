@@ -6,6 +6,118 @@
              Title="Daily View">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+            <Label x:Name="CurrentDate"
+            Text="date"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="Title"
+            FontAttributes="Bold"
+            VerticalOptions="Start" 
+            HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <ScrollView Grid.Row="1"
+        VerticalOptions="FillAndExpand">
+            <VerticalStackLayout
+            Margin="20">
+                <ListView
+                x:Name="DailyListView"
+                SelectionMode="None"
+                ItemsSource="{Binding GetAssignedTasks}"
+                HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <HorizontalStackLayout
+                                HorizontalOptions="StartAndExpand">
+                                    <VerticalStackLayout>
+                                        <Label
+                                    Text="{Binding Name}"
+                                    FontAttributes="Bold"/>
+                                        <Label>
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label" Binding="{Binding FormattedDueDate}" Value="">
+                                                    <Setter Property="IsVisible" Value="false"/>
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text ="Due: "
+                                                  FontAttributes="Bold" />
+                                                    <Span Text="{Binding FormattedDueDate}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                        <Label>
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label" Binding="{Binding FormattedAssignedDate}" Value="">
+                                                    <Setter Property="IsVisible" Value="false"/>
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text ="Assigned: "
+                                                  FontAttributes="Bold" />
+                                                    <Span Text="{Binding FormattedAssignedDate}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label>
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label" Binding="{Binding FormattedEstimatedTime}" Value="">
+                                                    <Setter Property="IsVisible" Value="false"/>
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text ="Estimated Time: "
+                                                  FontAttributes="Bold" />
+                                                    <Span Text="{Binding FormattedEstimatedTime}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label>
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label" Binding="{Binding FormattedCompletedDate}" Value="">
+                                                    <Setter Property="IsVisible" Value="false"/>
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text ="Completed:"
+                                                  FontAttributes="Bold" />
+                                                    <Span Text="{Binding FormattedCompletedDate}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </VerticalStackLayout>
+                                    <CheckBox
+                                    x:Name="CompletedBox"
+                                    IsChecked="{Binding CompletedStatus}"
+                                    CheckedChanged="CheckedComplete"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="CenterAndExpand"/>
+                                </HorizontalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                        <Button Text="Click to Change Date!"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="IncreaseDate"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
+
+
+<!-- image button version of header which is not great
+<Grid>
+        <Grid.RowDefinitions>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -42,5 +154,4 @@
                 <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.Plus}" Color="Black" />
             </ImageButton.Source>
         </ImageButton>
-    </Grid>
-</ContentPage>
+    </Grid>-->

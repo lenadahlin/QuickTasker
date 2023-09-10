@@ -8,7 +8,7 @@
         <VerticalStackLayout
             Margin="20">
             <ListView
-                x:Name="TaskBankView"
+                x:Name="CompletedView"
                 SelectionMode="None"
                 ItemsSource="{Binding GetCompletedTasks}"
                 HasUnevenRows="True">

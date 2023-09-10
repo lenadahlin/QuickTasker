@@ -43,6 +43,12 @@ namespace Quick_Tasker.ViewModels
 
             }
         }
+        public List<Tasks> GetAssignedTasks(DateTime newDate)
+        {
+
+                return connection.Table<Tasks>().Where(task => task.AssignedDate == newDate).OrderBy(x => x.Name).ToList();
+
+        }
 
         public void SaveTask(Tasks model)
         {

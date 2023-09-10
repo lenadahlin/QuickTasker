@@ -1,31 +1,65 @@
-﻿namespace Quick_Tasker.Pages;
-
+﻿using Quick_Tasker.ViewModels;
+namespace Quick_Tasker.Pages;
+using Quick_Tasker.Models;
 
 public partial class DailyView : ContentPage
 {
+    private TaskViewModel viewModel;
+    DateTime currentDate = DateTime.Today;
     public DailyView()
     {
+        BindingContext = viewModel = new TaskViewModel();
         InitializeComponent();
-        DateTime currentDate = DateTime.Now;
         string formattedDate = currentDate.ToString("dddd\n d MMMM");
-        CurrentDate.HorizontalTextAlignment = TextAlignment.Center;
         CurrentDate.Text = formattedDate;
-        Console.WriteLine("DailyView page constructor called");
-        NavigationPage.SetHasNavigationBar(this, false);
+        //why cant i do this in the xaml :(
+        CurrentDate.HorizontalTextAlignment = TextAlignment.Center;
+        DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
+        //NavigationPage.SetHasNavigationBar(this, false);
     }
-    //private void NewTaskClicked(object sender, EventArgs args)
-    //{
-    //    Navigation.PushAsync(new NewTask());
-    //}
 
-    private async void NewTaskClicked(object sender, EventArgs args)
+    private void CheckedComplete(object sender, CheckedChangedEventArgs e)
     {
-        await Navigation.PushAsync(new NewTask());
+
+        if (sender is CheckBox checkBox && checkBox.BindingContext is Tasks task)
+        {
+            if (task.CompletedStatus && task.CompletedDate == null)
+            {
+                // if checkbox is checked, change CompletedDate to today
+                task.CompletedDate = DateTime.Now;
+                viewModel.SaveTask(task);
+                DailyListView.ItemsSource = viewModel.GetCompletedTasks;
+            }
+            else if (!task.CompletedStatus && task.CompletedDate != null)
+            {
+                // if checkbox is un-checked, change CompletedDate to null
+                task.CompletedDate = null;
+                viewModel.SaveTask(task);
+                DailyListView.ItemsSource = viewModel.GetCompletedTasks;
+            }
+        }
     }
-    private void OpenFlyout(object sender, EventArgs args)
+    private void IncreaseDate(object sender, EventArgs args)
     {
-        //shows flyout when clicked
-        Console.WriteLine("OpenFlyout method called");
-        Shell.Current.FlyoutIsPresented = true;
+        //setting date for label and database stuff
+        currentDate = currentDate.AddDays(1);
+        string formattedDate = currentDate.ToString("dddd\n d MMMM");
+        CurrentDate.Text = formattedDate;
+        DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
     }
 }
+//private void NewTaskClicked(object sender, EventArgs args)
+//{
+//    Navigation.PushAsync(new NewTask());
+//}
+
+//private async void NewTaskClicked(object sender, EventArgs args)
+//{
+//    await Navigation.PushAsync(new NewTask());
+//}
+//private void OpenFlyout(object sender, EventArgs args)
+//{
+//    //shows flyout when clicked
+//    Console.WriteLine("OpenFlyout method called");
+//    Shell.Current.FlyoutIsPresented = true;
+//}
