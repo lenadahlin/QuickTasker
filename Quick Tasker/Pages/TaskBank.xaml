@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Quick_Tasker.Pages.TaskBank"
              Title="Task Bank">
-    <VerticalStackLayout>
         <ListView
                 x:Name="TaskBankView"
                 SelectionMode="None"
                 ItemsSource="{Binding GetUncompletedTasks}"
                 HasUnevenRows="True"
                 Margin="20"
-                HorizontalOptions="FillAndExpand">
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -98,5 +98,4 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </VerticalStackLayout>
 </ContentPage>

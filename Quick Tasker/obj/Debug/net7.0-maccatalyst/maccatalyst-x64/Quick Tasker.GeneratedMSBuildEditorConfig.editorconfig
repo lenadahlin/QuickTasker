@@ -1,0 +1,77 @@
+is_global = true
+build_property.TargetFramework = net7.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Quick_Tasker
+build_property.ProjectDir = /Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/
+
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Pages/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/AppShell.xaml
+
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Pages/Calendar.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.Calendar.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/Calendar.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/Calendar.xaml
+
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Pages/Completed.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.Completed.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/Completed.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/Completed.xaml
+
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Pages/DailyView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.DailyView.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/DailyView.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/DailyView.xaml
+
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Pages/NewTask.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.NewTask.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/NewTask.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/NewTask.xaml
+
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Pages/RecentlyDeleted.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.RecentlyDeleted.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/RecentlyDeleted.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/RecentlyDeleted.xaml
+
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Pages/TaskBank.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.TaskBank.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/TaskBank.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/TaskBank.xaml
+
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml

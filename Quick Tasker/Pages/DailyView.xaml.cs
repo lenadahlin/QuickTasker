@@ -13,7 +13,7 @@ public partial class DailyView : ContentPage
         string formattedDate = currentDate.ToString("dddd\n d MMMM");
         CurrentDate.Text = formattedDate;
         //why cant i do this in the xaml :(
-        CurrentDate.HorizontalTextAlignment = TextAlignment.Center;
+     //   CurrentDate.HorizontalTextAlignment = TextAlignment.Center;
         DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
         //NavigationPage.SetHasNavigationBar(this, false);
     }

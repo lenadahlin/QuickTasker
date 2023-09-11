@@ -25,6 +25,7 @@
             <Label Grid.Column="1"
             x:Name="CurrentDate"
             Text="date"
+            HorizontalTextAlignment="Center"
             SemanticProperties.HeadingLevel="Level1"
             FontSize="Title"
             FontAttributes="Bold"

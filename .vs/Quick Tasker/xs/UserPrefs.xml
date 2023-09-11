@@ -3,7 +3,7 @@
     <Files>
       <File FileName="Quick Tasker/MainPage.xaml.cs" />
       <File FileName="Quick Tasker/MainPage.xaml" />
-      <File FileName="Quick Tasker/Pages/DailyView.xaml" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Pages/DailyView.xaml" Line="45" Column="38" />
       <File FileName="Quick Tasker/Pages/DailyView.xaml.cs" />
       <File FileName="../../../../../usr/local/share/dotnet/packs/Microsoft.iOS.Sdk/16.4.7098/tools/msbuild/iOS/Xamarin.Shared.targets" />
       <File FileName="Quick Tasker/App.xaml" />
@@ -14,7 +14,7 @@
       <File FileName="Quick Tasker/Resources/Styles/Colors.xaml" />
       <File FileName="Quick Tasker/Pages/NewTask.xaml" />
       <File FileName="Quick Tasker/Pages/NewTask.xaml.cs" />
-      <File FileName="Quick Tasker/Pages/AppShell.xaml" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Pages/AppShell.xaml" />
       <File FileName="Quick Tasker/Pages/AppShell.xaml.cs" />
       <File FileName="Quick Tasker/Pages/TaskBank.xaml.cs" />
       <File FileName="Quick Tasker/Pages/Completed.xaml" />
@@ -32,9 +32,12 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Quick Tasker" expanded="True">
-            <Node name="Quick Tasker">
+            <Node name="Quick Tasker" expanded="True">
               <Node name="Pages" expanded="True">
-                <Node name="DailyView.xaml" expanded="True" selected="True" />
+                <Node name="Completed.xaml" expanded="True" />
+                <Node name="DailyView.xaml" expanded="True" />
+                <Node name="NewTask.xaml" expanded="True" />
+                <Node name="TaskBank.xaml" expanded="True" />
               </Node>
               <Node name="MainPage.xaml" expanded="True" />
             </Node>
