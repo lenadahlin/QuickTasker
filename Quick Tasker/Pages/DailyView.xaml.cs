@@ -4,7 +4,7 @@ using Quick_Tasker.Models;
 
 public partial class DailyView : ContentPage
 {
-    private TaskViewModel viewModel;
+    private readonly TaskViewModel viewModel;
     DateTime currentDate = DateTime.Today;
     public DailyView()
     {
@@ -12,10 +12,7 @@ public partial class DailyView : ContentPage
         InitializeComponent();
         string formattedDate = currentDate.ToString("dddd\n d MMMM");
         CurrentDate.Text = formattedDate;
-        //why cant i do this in the xaml :(
-     //   CurrentDate.HorizontalTextAlignment = TextAlignment.Center;
         DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
-        //NavigationPage.SetHasNavigationBar(this, false);
     }
     //refreshes tasks whenever page opens
     protected override void OnAppearing()
@@ -23,6 +20,7 @@ public partial class DailyView : ContentPage
         base.OnAppearing();
         DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
     }
+    //updates item source and updates database when tasks are checked as completed
     private void CheckedComplete(object sender, CheckedChangedEventArgs e)
     {
 
@@ -61,18 +59,3 @@ public partial class DailyView : ContentPage
         DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
     }
 }
-//private void NewTaskClicked(object sender, EventArgs args)
-//{
-//    Navigation.PushAsync(new NewTask());
-//}
-
-//private async void NewTaskClicked(object sender, EventArgs args)
-//{
-//    await Navigation.PushAsync(new NewTask());
-//}
-//private void OpenFlyout(object sender, EventArgs args)
-//{
-//    //shows flyout when clicked
-//    Console.WriteLine("OpenFlyout method called");
-//    Shell.Current.FlyoutIsPresented = true;
-//}

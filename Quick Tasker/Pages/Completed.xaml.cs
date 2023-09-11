@@ -5,7 +5,7 @@ namespace Quick_Tasker.Pages;
 
 public partial class Completed : ContentPage
 {
-    private TaskViewModel viewModel;
+    private readonly TaskViewModel viewModel;
     public Completed()
     {
         BindingContext = viewModel = new TaskViewModel();

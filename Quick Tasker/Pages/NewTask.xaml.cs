@@ -21,7 +21,6 @@ public partial class NewTask : ContentPage
         AssignedDateSwitch.IsToggled = false;
         EstimatedTimeEntry.Time = TimeSpan.Zero;
         EstimatedTimeSwitch.IsToggled = false;
-        //DueDateEntry.IsEnabled = false;
     }
 
     //Task information toggles
@@ -106,10 +105,7 @@ public partial class NewTask : ContentPage
             };
             //save to database
             TaskViewModel.Current.SaveTask(newTask);
-            //NameEntry.Text = string.Empty;
-            //AssignedDateEntry.Date = default;
-            //DueDateEntry.Date = default;
-            //EstimatedTimeEntry = default;
+
             if (Navigation.NavigationStack.Count > 1)
             {
                 await Navigation.PopAsync();

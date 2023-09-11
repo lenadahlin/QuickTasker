@@ -4,15 +4,19 @@
              x:Class="Quick_Tasker.Pages.DailyView"
              xmlns:helper="clr-namespace:Quick_Tasker.Helpers"
              Title="Daily View">
-    <VerticalStackLayout>
         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
-            <ImageButton Grid.Column="0"
+        <!-- Header -->
+            <ImageButton Grid.Row="0"
+                Grid.Column="0"
                      x:Name="Left"
                      VerticalOptions="Start"
                      HorizontalOptions="Start"
@@ -21,8 +25,9 @@
                     <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.ArrowLeft}" Color="Black" />
                 </ImageButton.Source>
             </ImageButton>
-
-            <Label Grid.Column="1"
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
             x:Name="CurrentDate"
             Text="date"
             HorizontalTextAlignment="Center"
@@ -31,7 +36,8 @@
             FontAttributes="Bold"
             VerticalOptions="Start" 
             HorizontalOptions="CenterAndExpand"/>
-            <ImageButton 
+            <ImageButton
+                Grid.Row="0"
                      Grid.Column="2"
             x:Name="Right"
                      VerticalOptions="Start"
@@ -41,8 +47,10 @@
                     <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.ArrowRight}" Color="Black" />
                 </ImageButton.Source>
             </ImageButton>
-        </Grid>
+        <!-- Task List -->
         <ListView
+            Grid.Row="1"
+            Grid.ColumnSpan="3"
                 x:Name="DailyListView"
                 SelectionMode="None"
                 ItemsSource="{Binding GetAssignedTasks}"
@@ -136,6 +144,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>
 

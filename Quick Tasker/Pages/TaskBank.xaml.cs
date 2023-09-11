@@ -7,7 +7,7 @@ namespace Quick_Tasker.Pages;
 
 public partial class TaskBank : ContentPage
 {
-    private TaskViewModel viewModel;
+    private readonly TaskViewModel viewModel;
     public TaskBank()
     {
         BindingContext = viewModel = new TaskViewModel();
