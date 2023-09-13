@@ -20,7 +20,6 @@ public partial class TaskBank : ContentPage
         TaskBankView.ItemsSource = viewModel.GetUncompletedTasks;
     }
 
-
     private void CheckedComplete(object sender, CheckedChangedEventArgs e)
     {
 

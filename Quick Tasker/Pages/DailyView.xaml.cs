@@ -58,4 +58,22 @@ public partial class DailyView : ContentPage
         CurrentDate.Text = formattedDate;
         DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
     }
+
+    void OnSwiped(object sender, SwipedEventArgs e)
+    {
+        if (e.Direction == SwipeDirection.Left)
+        {
+            currentDate = currentDate.AddDays(-1);
+            string formattedDate = currentDate.ToString("dddd\n d MMMM");
+            CurrentDate.Text = formattedDate;
+            DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
+        }
+        if (e.Direction == SwipeDirection.Right)
+        {
+            currentDate = currentDate.AddDays(1);
+            string formattedDate = currentDate.ToString("dddd\n d MMMM");
+            CurrentDate.Text = formattedDate;
+            DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
+        }
+    }
 }

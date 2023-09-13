@@ -4,7 +4,13 @@
              x:Class="Quick_Tasker.Pages.DailyView"
              xmlns:helper="clr-namespace:Quick_Tasker.Helpers"
              Title="Daily View">
-        <Grid>
+        <Grid
+            x:Name="MainGrid">
+            <Grid.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left,Right"
+                    Swiped="OnSwiped"/>
+
+            </Grid.GestureRecognizers>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>

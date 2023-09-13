@@ -3,9 +3,8 @@
     <Files>
       <File FileName="Quick Tasker/MainPage.xaml.cs" />
       <File FileName="Quick Tasker/MainPage.xaml" />
-      <File FileName="Quick Tasker/Pages/DailyView.xaml" Line="45" Column="38" />
+      <File FileName="Quick Tasker/Pages/DailyView.xaml" Line="10" Column="81" />
       <File FileName="Quick Tasker/Pages/DailyView.xaml.cs" />
-      <File FileName="../../../../../usr/local/share/dotnet/packs/Microsoft.iOS.Sdk/16.4.7098/tools/msbuild/iOS/Xamarin.Shared.targets" />
       <File FileName="Quick Tasker/App.xaml" />
       <File FileName="Quick Tasker/App.xaml.cs" />
       <File FileName="Quick Tasker/MauiProgram.cs" />
@@ -25,20 +24,31 @@
       <File FileName="Quick Tasker/Services/DatabaseService.cs" />
       <File FileName="Quick Tasker/Models/ObservableObject.cs" />
       <File FileName="Quick Tasker/Models/Tasks.cs" />
-      <File FileName="Quick Tasker/ViewModels/TaskViewModel.cs" />
+      <File FileName="Quick Tasker/ViewModels/TaskViewModel.cs" Line="1" Column="1" />
       <File FileName="Quick Tasker/Pages/TaskBank.xaml" />
+      <File FileName="Quick Tasker/Pages/RecentlyDeleted.xaml.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Quick Tasker" expanded="True">
-            <Node name="Quick Tasker" expanded="True">
+            <Node name="Quick Tasker">
+              <Node name="Helpers" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
+                <Node name="AppShell.xaml" expanded="True" />
+                <Node name="Calendar.xaml" expanded="True" />
                 <Node name="Completed.xaml" expanded="True" />
-                <Node name="DailyView.xaml" expanded="True" />
+                <Node name="DailyView.xaml" selected="True" />
                 <Node name="NewTask.xaml" expanded="True" />
+                <Node name="RecentlyDeleted.xaml" expanded="True" />
                 <Node name="TaskBank.xaml" expanded="True" />
               </Node>
+              <Node name="Resources" expanded="True">
+                <Node name="Fonts" expanded="True" />
+              </Node>
+              <Node name="ViewModels" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
               <Node name="MainPage.xaml" expanded="True" />
             </Node>
           </Node>
@@ -46,13 +56,13 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.Ide.ItemProperties.Quick_220Tasker PreferredExecutionTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.68" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
 </Properties>
