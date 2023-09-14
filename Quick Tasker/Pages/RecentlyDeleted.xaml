@@ -3,12 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Quick_Tasker.Pages.RecentlyDeleted"
              Title="Recently Deleted">
-<BoxView Color="Teal">
-    <BoxView.GestureRecognizers>
-        <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
-        <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
-        <SwipeGestureRecognizer Direction="Up" Swiped="OnSwiped"/>
-        <SwipeGestureRecognizer Direction="Down" Swiped="OnSwiped"/>
-    </BoxView.GestureRecognizers>
-</BoxView>
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
 </ContentPage>
