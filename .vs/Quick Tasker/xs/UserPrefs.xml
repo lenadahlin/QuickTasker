@@ -1,17 +1,9 @@
 ﻿<Properties StartupConfiguration="{5399F89B-0C23-44B3-8B45-C5BCA46583DF}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Quick_220Tasker PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="Quick Tasker/Pages/DailyView.xaml">
     <Files>
       <File FileName="Quick Tasker/MainPage.xaml.cs" />
       <File FileName="Quick Tasker/MainPage.xaml" />
-      <File FileName="Quick Tasker/Pages/DailyView.xaml" Line="13" Column="42" />
+      <File FileName="Quick Tasker/Pages/DailyView.xaml" Line="9" Column="50" />
       <File FileName="Quick Tasker/Pages/DailyView.xaml.cs" />
       <File FileName="Quick Tasker/App.xaml" />
       <File FileName="Quick Tasker/App.xaml.cs" />
@@ -32,7 +24,7 @@
       <File FileName="Quick Tasker/Services/DatabaseService.cs" />
       <File FileName="Quick Tasker/Models/ObservableObject.cs" />
       <File FileName="Quick Tasker/Models/Tasks.cs" />
-      <File FileName="Quick Tasker/ViewModels/TaskViewModel.cs" Line="41" Column="14" />
+      <File FileName="Quick Tasker/ViewModels/TaskViewModel.cs" />
       <File FileName="Quick Tasker/Pages/TaskBank.xaml" />
       <File FileName="Quick Tasker/Pages/RecentlyDeleted.xaml.cs" />
     </Files>
@@ -40,10 +32,7 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Quick Tasker" expanded="True">
-            <Node name="Quick Tasker" expanded="True">
-              <Node name="Pages" expanded="True">
-                <Node name="DailyView.xaml" selected="True" />
-              </Node>
+            <Node name="Quick Tasker">
               <Node name="ViewModels" expanded="True" />
               <Node name="App.xaml" expanded="True" />
               <Node name="MainPage.xaml" expanded="True" />
@@ -53,5 +42,13 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Quick_220Tasker PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.68" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

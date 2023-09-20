@@ -68,6 +68,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.TaskBan
 build_metadata.AdditionalFiles.TargetPath = Pages/TaskBank.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/TaskBank.xaml
 
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Pages/TaskGenerator.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.TaskGenerator.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/TaskGenerator.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/TaskGenerator.xaml
+
 [/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Resources.Styles.Colors.xaml

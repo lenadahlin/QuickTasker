@@ -33,4 +33,8 @@
         Title="Recently Deleted"
         ContentTemplate="{DataTemplate local:RecentlyDeleted}"
         Route="RecentlyDeleted" />
+        <ShellContent
+        Title="Task Generator"
+        ContentTemplate="{DataTemplate local:TaskGenerator}"
+        Route="TaskGenerator" />
 </Shell>

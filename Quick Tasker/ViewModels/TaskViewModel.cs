@@ -2,6 +2,7 @@
 using Quick_Tasker.Services;
 using System.ComponentModel;
 using SQLite;
+using Android.Graphics;
 
 namespace Quick_Tasker.ViewModels
 {
@@ -49,6 +50,13 @@ namespace Quick_Tasker.ViewModels
                 return connection.Table<Tasks>().Where(task => task.AssignedDate == newDate).OrderBy(x => x.Name).ToList();
 
         }
+
+        //public List<Tasks> GetRandomTask(TimeSpan timeAvailable)
+        //{
+
+        //   // return connection.Table<Tasks>().Where(task => task.EstimatedTime <= timeAvailable).OrderBy(x => x.Name).ToList();
+        //    return connection.Query<Tasks>("select * from Tasks WHERE Estimated Time <= timeAvailable ORDER BY RANDOM() LIMIT 1");
+        //}
 
         public void SaveTask(Tasks model)
         {

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quick_Tasker.Pages.TaskGenerator"
+             Title="Task Generator">
+    <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <!--Assigned Date-->
+            <Label
+            VerticalOptions="Center"
+            Text="Date for tasks:"
+            FontAttributes="Bold"/>
+
+        </HorizontalStackLayout>
+        <DatePicker
+            x:Name="AssignedDateEntry"
+            Format="dd/MM/yyyy"
+/>
+
+
+
+
+        <HorizontalStackLayout>
+            <!--Assigned Date-->
+            <Label
+            VerticalOptions="Center"
+            Text="Time Available: "
+            FontAttributes="Bold"/>
+        </HorizontalStackLayout>
+        <TimePicker
+            x:Name="EstimatedTimeEntry"
+            Format="HH:mm"/>
+                <Button
+            x:Name="GenerateButton"
+            Text="Generate"
+            Clicked="GenerateButton_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

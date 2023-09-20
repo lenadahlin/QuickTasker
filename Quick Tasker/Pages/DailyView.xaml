@@ -69,7 +69,8 @@
                 ItemsSource="{Binding GetAssignedTasks}"
                 HasUnevenRows="True"
                 Margin="20"
-                HorizontalOptions="FillAndExpand">
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -158,12 +159,15 @@
                                     CheckedChanged="CheckedComplete"
                                     HorizontalOptions="End"
                                     VerticalOptions="Center"/>
+
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
+
                 </ListView.ItemTemplate>
             </ListView>
         </Grid>
+
     </ContentView>
 </ContentPage>
 
