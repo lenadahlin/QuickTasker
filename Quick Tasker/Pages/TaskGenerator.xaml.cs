@@ -31,10 +31,7 @@ public partial class TaskGenerator : ContentPage
             await DisplayAlert("Warning", "Date must be on or after today", "OK");
             return;
         }
-        viewModel.PrintAllTasks();
         Tasks randomTask = viewModel.GetRandomTask(EstimatedTimeEntry.Time);
-        Debug.WriteLine("Available Time entry: " + EstimatedTimeEntry.Time);
-        Debug.WriteLine("AssignedDate: " + randomTask.AssignedDate);
         if (randomTask == null)
         {
             await DisplayAlert("Warning", "There are no tasks within the given parameters", "OK");
