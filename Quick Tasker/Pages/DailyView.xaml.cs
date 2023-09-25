@@ -4,10 +4,20 @@ using Quick_Tasker.Models;
 
 public partial class DailyView : ContentPage
 {
-    private readonly TaskViewModel viewModel;
+    private TaskViewModel viewModel;
     DateTime currentDate = DateTime.Today;
     public DailyView()
     {
+        Initialize(DateTime.Today);
+    }
+    public DailyView(DateTime selectedDate)
+    {
+        Initialize(selectedDate);
+    }
+
+    private void Initialize(DateTime selectedDate)
+    {
+        currentDate = selectedDate;
         BindingContext = viewModel = new TaskViewModel();
         InitializeComponent();
         string formattedDate = currentDate.ToString("dddd\n d MMMM");

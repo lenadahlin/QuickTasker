@@ -5,10 +5,12 @@ using SQLite;
 using Android.Graphics;
 using System.Diagnostics;
 using static Android.App.DownloadManager;
+using System.Globalization;
+using Microsoft.VisualBasic;
 
 namespace Quick_Tasker.ViewModels
 {
-    internal class TaskViewModel 
+    internal class TaskViewModel
     {
         //public event PropertyChangedEventHandler PropertyChanged;
         public static TaskViewModel Current { get; set; }
@@ -49,22 +51,50 @@ namespace Quick_Tasker.ViewModels
         public List<Tasks> GetAssignedTasks(DateTime newDate)
         {
 
-                return connection.Table<Tasks>().Where(task => task.AssignedDate == newDate).OrderBy(x => x.Name).ToList();
+            return connection.Table<Tasks>().Where(task => task.AssignedDate == newDate).OrderBy(x => x.Name).ToList();
 
         }
 
-        public Tasks GetRandomTask(TimeSpan timeAvailable)
+        //TODO maybe make it so that it doesnt do the same task twice in a row? if i have time
+        public Tasks GetRandomTask(TimeSpan timeAvailable, DateTime assignedDate)
         {
-            //this took too long to figure out :) :) :)
-            //timeAvailable needs to be converted to a different format for this to work
+
+            //format time to be the same format as db
             string formattedTimeAvailable = timeAvailable.ToString(@"hh\:mm\:ss");
 
-            string query = $"SELECT * FROM Tasks " +
-                           $"WHERE EstimatedTime <= '{formattedTimeAvailable}' " +
-                           $"AND AssignedDate IS NULL " +
-                           $"ORDER BY RANDOM() LIMIT 1";
+            string query = @"
+            SELECT * FROM Tasks
+            WHERE EstimatedTime <= ? 
+            AND AssignedDate IS NULL 
+            AND CompletedDate IS NULL 
+            AND (DueDate IS NULL OR DueDate >= ?)
+            ORDER BY RANDOM() LIMIT 1";
 
-            return connection.Query<Tasks>(query).FirstOrDefault();
+            return connection.Query<Tasks>(query, formattedTimeAvailable, assignedDate).FirstOrDefault();
+        }
+        // Function to print all tasks in the database
+        public void PrintAllTasks()
+        {
+            List<Tasks> tasks = connection.Table<Tasks>().ToList();
+
+            if (tasks.Any())
+            {
+                foreach (var task in tasks)
+                {
+                    Debug.WriteLine($"Task ID: {task.Id}");
+                    Debug.WriteLine($"Name: {task.Name}");
+                    Debug.WriteLine($"Due Date: {task.DueDate}");
+                    Debug.WriteLine($"Assigned Date: {task.AssignedDate}");
+                    Debug.WriteLine($"Estimated Time: {task.EstimatedTime}");
+                    Debug.WriteLine($"Completed Date: {task.CompletedDate}");
+                    Debug.WriteLine($"Completed Status: {task.CompletedStatus}");
+                    Debug.WriteLine("------");
+                }
+            }
+            else
+            {
+                Debug.WriteLine("No tasks found in the database.");
+            }
         }
 
         public void SaveTask(Tasks model)
@@ -73,13 +103,13 @@ namespace Quick_Tasker.ViewModels
             if (model.Id > 0)
             {
                 connection.Update(model);
-               // PropertyChanged(this, new PropertyChangedEventArgs("Tasks"));
+                // PropertyChanged(this, new PropertyChangedEventArgs("Tasks"));
             }
             //If not, it's new and we need to add it
             else
             {
                 connection.Insert(model);
-              //  PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tasks"));
+                //  PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tasks"));
             }
         }
 

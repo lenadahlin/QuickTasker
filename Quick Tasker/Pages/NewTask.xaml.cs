@@ -106,14 +106,9 @@ public partial class NewTask : ContentPage
             //save to database
             TaskViewModel.Current.SaveTask(newTask);
 
-            if (Navigation.NavigationStack.Count > 1)
-            {
-                await Navigation.PopAsync();
-            } else
-            {
-                await Shell.Current.GoToAsync("//TaskBank");
-            }
-            
+            await Navigation.PushAsync(new DailyView(AssignedDateEntry.Date));
         }
+
     }
+
 }

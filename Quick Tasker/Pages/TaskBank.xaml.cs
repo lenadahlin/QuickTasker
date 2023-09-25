@@ -16,9 +16,9 @@ public partial class TaskBank : ContentPage
     //refreshes tasks whenever page opens
     protected override void OnAppearing()
     {
-        viewModel.PrintAllTasks();
         base.OnAppearing();
         TaskBankView.ItemsSource = viewModel.GetUncompletedTasks;
+        viewModel.PrintAllTasks();
     }
 
     private void CheckedComplete(object sender, CheckedChangedEventArgs e)
