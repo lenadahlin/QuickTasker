@@ -1,10 +1,15 @@
 ﻿namespace Quick_Tasker.Pages;
 
+using System.Diagnostics;
+using Quick_Tasker.Models;
+using Quick_Tasker.ViewModels;
 public partial class TaskGenerator : ContentPage
 {
-	public TaskGenerator()
+    private readonly TaskViewModel viewModel;
+    public TaskGenerator()
 	{
-		InitializeComponent();
+        BindingContext = viewModel = new TaskViewModel();
+        InitializeComponent();
 	}
 
     protected override void OnAppearing()
@@ -26,5 +31,19 @@ public partial class TaskGenerator : ContentPage
             await DisplayAlert("Warning", "Date must be on or after today", "OK");
             return;
         }
+        viewModel.PrintAllTasks();
+        Tasks randomTask = viewModel.GetRandomTask(EstimatedTimeEntry.Time);
+        Debug.WriteLine("Available Time entry: " + EstimatedTimeEntry.Time);
+        Debug.WriteLine("AssignedDate: " + randomTask.AssignedDate);
+        if (randomTask == null)
+        {
+            await DisplayAlert("Warning", "There are no tasks within the given parameters", "OK");
+            return;
+        } else
+        {
+            BindingContext = randomTask;
+            string action = await DisplayActionSheet("Assign Task?", "Cancel", null, "Email", "Twitter", "Facebook");
+        }
+
     }
 }

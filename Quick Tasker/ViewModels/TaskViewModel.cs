@@ -3,6 +3,7 @@ using Quick_Tasker.Services;
 using System.ComponentModel;
 using SQLite;
 using Android.Graphics;
+using System.Diagnostics;
 
 namespace Quick_Tasker.ViewModels
 {
@@ -51,12 +52,40 @@ namespace Quick_Tasker.ViewModels
 
         }
 
-        //public List<Tasks> GetRandomTask(TimeSpan timeAvailable)
-        //{
+        public Tasks GetRandomTask(TimeSpan timeAvailable)
+        {
+            string queryString = "SELECT * FROM Tasks WHERE EstimatedTime <= ? AND AssignedDate IS NULL LIMIT 1";
+            Debug.WriteLine("Query: " + queryString);
+            Debug.WriteLine("timeAvailable: " + timeAvailable);
+            //return connection.Query<Tasks>("SELECT * FROM Tasks WHERE EstimatedTime <= ? AND AssignedDate IS NULL ORDER BY RANDOM() LIMIT 1", timeAvailable).FirstOrDefault();
+            return connection.Query<Tasks>("SELECT * FROM Tasks WHERE AssignedDate = '' LIMIT 1", timeAvailable).FirstOrDefault();
 
-        //   // return connection.Table<Tasks>().Where(task => task.EstimatedTime <= timeAvailable).OrderBy(x => x.Name).ToList();
-        //    return connection.Query<Tasks>("select * from Tasks WHERE Estimated Time <= timeAvailable ORDER BY RANDOM() LIMIT 1");
-        //}
+        }
+
+        // Function to print all tasks in the database
+        public void PrintAllTasks()
+        {
+            List<Tasks> tasks = connection.Table<Tasks>().ToList();
+
+            if (tasks.Any())
+            {
+                foreach (var task in tasks)
+                {
+                    Debug.WriteLine($"Task ID: {task.Id}");
+                    Debug.WriteLine($"Name: {task.Name}");
+                    Debug.WriteLine($"Due Date: {task.DueDate}");
+                    Debug.WriteLine($"Assigned Date: {task.AssignedDate}");
+                    Debug.WriteLine($"Estimated Time: {task.EstimatedTime}");
+                    Debug.WriteLine($"Completed Date: {task.CompletedDate}");
+                    Debug.WriteLine($"Completed Status: {task.CompletedStatus}");
+                    Debug.WriteLine("------");
+                }
+            }
+            else
+            {
+                Debug.WriteLine("No tasks found in the database.");
+            }
+        }
 
         public void SaveTask(Tasks model)
         {

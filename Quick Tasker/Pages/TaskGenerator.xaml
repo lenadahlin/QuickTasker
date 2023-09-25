@@ -14,14 +14,9 @@
         </HorizontalStackLayout>
         <DatePicker
             x:Name="AssignedDateEntry"
-            Format="dd/MM/yyyy"
-/>
-
-
-
+            Format="dd/MM/yyyy"/>
 
         <HorizontalStackLayout>
-            <!--Assigned Date-->
             <Label
             VerticalOptions="Center"
             Text="Time Available: "
@@ -30,7 +25,7 @@
         <TimePicker
             x:Name="EstimatedTimeEntry"
             Format="HH:mm"/>
-                <Button
+        <Button
             x:Name="GenerateButton"
             Text="Generate"
             Clicked="GenerateButton_Clicked"/>
