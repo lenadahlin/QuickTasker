@@ -106,7 +106,13 @@ public partial class NewTask : ContentPage
             //save to database
             TaskViewModel.Current.SaveTask(newTask);
 
-            await Navigation.PushAsync(new DailyView(AssignedDateEntry.Date));
+            if(assignedDateOnly == null)
+            {
+                await Navigation.PushAsync(new TaskBank());
+            } else
+            {
+                await Navigation.PushAsync(new DailyView(AssignedDateEntry.Date));
+            }
         }
 
     }

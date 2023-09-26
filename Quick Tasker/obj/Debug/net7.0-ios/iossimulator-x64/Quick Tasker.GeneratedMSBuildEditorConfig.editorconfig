@@ -52,12 +52,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.NewTask
 build_metadata.AdditionalFiles.TargetPath = Pages/NewTask.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/NewTask.xaml
 
-[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Pages/RecentlyDeleted.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.RecentlyDeleted.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages/RecentlyDeleted.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages/RecentlyDeleted.xaml
-
 [/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Pages/TaskBank.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.TaskBank.xaml

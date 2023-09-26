@@ -79,7 +79,7 @@
                                 </Label.Triggers>
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text ="Completed:"
+                                        <Span Text ="Completed: "
                                                   FontAttributes="Bold" />
                                         <Span Text="{Binding FormattedCompletedDate}"/>
                                     </FormattedString>

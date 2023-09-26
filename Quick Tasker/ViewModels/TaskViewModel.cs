@@ -55,13 +55,12 @@ namespace Quick_Tasker.ViewModels
 
         }
 
-        //TODO maybe make it so that it doesnt do the same task twice in a row? if i have time
         public Tasks GetRandomTask(TimeSpan timeAvailable, DateTime assignedDate)
         {
 
             //format time to be the same format as db
             string formattedTimeAvailable = timeAvailable.ToString(@"hh\:mm\:ss");
-
+            Debug.WriteLine("Formatted time available: " + formattedTimeAvailable);
             string query = @"
             SELECT * FROM Tasks
             WHERE EstimatedTime <= ? 
@@ -70,32 +69,33 @@ namespace Quick_Tasker.ViewModels
             AND (DueDate IS NULL OR DueDate >= ?)
             ORDER BY RANDOM() LIMIT 1";
 
+
             return connection.Query<Tasks>(query, formattedTimeAvailable, assignedDate).FirstOrDefault();
         }
         // Function to print all tasks in the database
-        public void PrintAllTasks()
-        {
-            List<Tasks> tasks = connection.Table<Tasks>().ToList();
+        //public void PrintAllTasks()
+        //{
+        //    List<Tasks> tasks = connection.Table<Tasks>().ToList();
 
-            if (tasks.Any())
-            {
-                foreach (var task in tasks)
-                {
-                    Debug.WriteLine($"Task ID: {task.Id}");
-                    Debug.WriteLine($"Name: {task.Name}");
-                    Debug.WriteLine($"Due Date: {task.DueDate}");
-                    Debug.WriteLine($"Assigned Date: {task.AssignedDate}");
-                    Debug.WriteLine($"Estimated Time: {task.EstimatedTime}");
-                    Debug.WriteLine($"Completed Date: {task.CompletedDate}");
-                    Debug.WriteLine($"Completed Status: {task.CompletedStatus}");
-                    Debug.WriteLine("------");
-                }
-            }
-            else
-            {
-                Debug.WriteLine("No tasks found in the database.");
-            }
-        }
+        //    if (tasks.Any())
+        //    {
+        //        foreach (var task in tasks)
+        //        {
+        //            Debug.WriteLine($"Task ID: {task.Id}");
+        //            Debug.WriteLine($"Name: {task.Name}");
+        //            Debug.WriteLine($"Due Date: {task.DueDate}");
+        //            Debug.WriteLine($"Assigned Date: {task.AssignedDate}");
+        //            Debug.WriteLine($"Estimated Time: {task.EstimatedTime}");
+        //            Debug.WriteLine($"Completed Date: {task.CompletedDate}");
+        //            Debug.WriteLine($"Completed Status: {task.CompletedStatus}");
+        //            Debug.WriteLine("------");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Debug.WriteLine("No tasks found in the database.");
+        //    }
+        //}
 
         public void SaveTask(Tasks model)
         {

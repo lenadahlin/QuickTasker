@@ -29,10 +29,6 @@
         Title="Calendar"
         ContentTemplate="{DataTemplate local:Calendar}"
         Route="Calendar" />
-    <ShellContent
-        Title="Recently Deleted"
-        ContentTemplate="{DataTemplate local:RecentlyDeleted}"
-        Route="RecentlyDeleted" />
         <ShellContent
         Title="Task Generator"
         ContentTemplate="{DataTemplate local:TaskGenerator}"
