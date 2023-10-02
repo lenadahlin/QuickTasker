@@ -1,4 +1,6 @@
-﻿namespace Quick_Tasker.Pages;
+﻿using Syncfusion.Maui.Calendar;
+
+namespace Quick_Tasker.Pages;
 
 public partial class Calendar : ContentPage
 {
@@ -7,8 +9,12 @@ public partial class Calendar : ContentPage
 		InitializeComponent();
 	}
 
-    private async void GoButton_Clicked(System.Object sender, System.EventArgs e)
+    private async void OnCalendarSelectionChanged(System.Object sender, CalendarSelectionChangedEventArgs e)
     {
-        await Navigation.PushAsync(new DailyView(AssignedDateEntry.Date));
+        await Navigation.PushAsync(new DailyView((DateTime)e.NewValue));
     }
+
+
+    
+
 }

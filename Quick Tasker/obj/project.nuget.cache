@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YtiPDbH4Kbf0trjcaDVw4iLSFH9f1mZwAFppoWlpCQm3b50O3eH6C7kfGjTYLcZJEz1F/WOqK5f5KMFVzQSb9g==",
+  "dgSpecHash": "/nmxf/yA6z+CVwwfjAllQMdsmh0NU8+CqusjTs4U7ejr9qJ5e4hU+ogMVAyTaEr6sqs9+A/hI6SiQRC4KKYC1Q==",
   "success": true,
   "projectFilePath": "/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Quick Tasker.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,9 @@
     "/Users/lenadahlin/.nuget/packages/sqlitepclraw.lib.e_sqlite3.android/2.0.4/sqlitepclraw.lib.e_sqlite3.android.2.0.4.nupkg.sha512",
     "/Users/lenadahlin/.nuget/packages/sqlitepclraw.provider.dynamic_cdecl/2.1.6/sqlitepclraw.provider.dynamic_cdecl.2.1.6.nupkg.sha512",
     "/Users/lenadahlin/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.0.4/sqlitepclraw.provider.e_sqlite3.2.0.4.nupkg.sha512",
+    "/Users/lenadahlin/.nuget/packages/syncfusion.licensing/23.1.38/syncfusion.licensing.23.1.38.nupkg.sha512",
+    "/Users/lenadahlin/.nuget/packages/syncfusion.maui.calendar/23.1.38/syncfusion.maui.calendar.23.1.38.nupkg.sha512",
+    "/Users/lenadahlin/.nuget/packages/syncfusion.maui.core/23.1.38/syncfusion.maui.core.23.1.38.nupkg.sha512",
     "/Users/lenadahlin/.nuget/packages/system.buffers/4.4.0/system.buffers.4.4.0.nupkg.sha512",
     "/Users/lenadahlin/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/lenadahlin/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",

@@ -87,6 +87,10 @@
               "target": "Package",
               "version": "[2.1.6, )"
             },
+            "Syncfusion.Maui.Calendar": {
+              "target": "Package",
+              "version": "[23.1.38, )"
+            },
             "Xamarin.Android.Glide": {
               "target": "Package",
               "version": "[4.13.2.2, )",
@@ -217,6 +221,10 @@
               "target": "Package",
               "version": "[2.1.6, )"
             },
+            "Syncfusion.Maui.Calendar": {
+              "target": "Package",
+              "version": "[23.1.38, )"
+            },
             "sqlite-net-pcl": {
               "target": "Package",
               "version": "[1.8.116, )"
@@ -291,6 +299,10 @@
             "SQLitePCLRaw.provider.dynamic_cdecl": {
               "target": "Package",
               "version": "[2.1.6, )"
+            },
+            "Syncfusion.Maui.Calendar": {
+              "target": "Package",
+              "version": "[23.1.38, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

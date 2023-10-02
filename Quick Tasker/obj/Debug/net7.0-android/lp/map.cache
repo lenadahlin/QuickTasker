@@ -156,3 +156,9 @@ maui.aar
 Microsoft.Maui.aar
 Microsoft.Maui.Essentials.aar
 Xamarin.Google.Crypto.Tink.Android.aar
+XCalendar.Maui.dll
+XCalendar.Maui.aar
+Syncfusion.Maui.Calendar.dll
+Syncfusion.Maui.Core.dll
+Syncfusion.Maui.Calendar.aar
+Syncfusion.Maui.Core.aar

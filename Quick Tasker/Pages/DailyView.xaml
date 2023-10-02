@@ -112,9 +112,19 @@
 
                                         <VerticalStackLayout HorizontalOptions="FillAndExpand"
                                                  Padding="5">
-                                            <Label Grid.Column="0"
-                                    Text="{Binding Name}"
-                                    FontAttributes="Bold"/>
+                                            <Label Grid.Column="0">
+                                                <Label.Triggers>
+                                                    <DataTrigger TargetType="Label" Binding="{Binding CompletedStatus}" Value="true">
+                                                        <Setter Property="Text" Value="{Binding Name}"/>
+                                                        <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                        <Setter Property="FontAttributes" Value="Bold"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger TargetType="Label" Binding="{Binding CompletedStatus}" Value="false">
+                                                        <Setter Property="Text" Value="{Binding Name}"/>
+                                                        <Setter Property="FontAttributes" Value="Bold"/>
+                                                    </DataTrigger>
+                                                </Label.Triggers>
+                                            </Label>
                                             <Label Grid.Column="0">
                                                 <Label.Triggers>
                                                     <DataTrigger TargetType="Label" Binding="{Binding FormattedDueDate}" Value="">
@@ -125,6 +135,7 @@
                                                     <FormattedString>
                                                         <Span Text ="Due: "
                                                   FontAttributes="Bold" />
+                                                        
                                                         <Span Text="{Binding FormattedDueDate}"/>
                                                     </FormattedString>
                                                 </Label.FormattedText>
