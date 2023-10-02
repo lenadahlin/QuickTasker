@@ -6,4 +6,9 @@ public partial class Calendar : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void GoButton_Clicked(System.Object sender, System.EventArgs e)
+    {
+        await Navigation.PushAsync(new DailyView(AssignedDateEntry.Date));
+    }
 }

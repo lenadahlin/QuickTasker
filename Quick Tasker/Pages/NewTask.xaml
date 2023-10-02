@@ -2,8 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Quick_Tasker.Pages.NewTask"
-             Title="New Task">
-    <VerticalStackLayout>
+             Title="New Task"
+             BackgroundColor="#DCEDF9">
+                <Border StrokeShape="RoundRectangle"
+                BackgroundColor="#BDE0FE"
+                Margin="2"
+                Padding="3"
+                    VerticalOptions="Start">
+    <VerticalStackLayout BackgroundColor="White"
+                         Margin="2"
+                         VerticalOptions="Start"
+                         Padding="10">
         <!--Name-->
         <Label
             VerticalOptions="Center"
@@ -67,4 +76,5 @@
             Text="Save"
             Clicked="SaveButton_Clicked"/>
     </VerticalStackLayout>
+                    </Border>
 </ContentPage>

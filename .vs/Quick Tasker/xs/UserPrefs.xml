@@ -5,12 +5,12 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Quick Tasker/Pages/Calendar.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Quick Tasker/Pages/TaskBank.xaml">
     <Files>
-      <File FileName="Quick Tasker/MainPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="Quick Tasker/MainPage.xaml.cs" />
       <File FileName="Quick Tasker/MainPage.xaml" />
-      <File FileName="Quick Tasker/Pages/DailyView.xaml" Line="162" Column="1" />
-      <File FileName="Quick Tasker/Pages/DailyView.xaml.cs" Line="14" Column="6" />
+      <File FileName="Quick Tasker/Pages/DailyView.xaml" Line="149" Column="73" />
+      <File FileName="Quick Tasker/Pages/DailyView.xaml.cs" />
       <File FileName="Quick Tasker/App.xaml" />
       <File FileName="Quick Tasker/App.xaml.cs" />
       <File FileName="Quick Tasker/MauiProgram.cs" />
@@ -18,23 +18,21 @@
       <File FileName="Quick Tasker/Resources/Styles/Styles.xaml" />
       <File FileName="Quick Tasker/Resources/Styles/Colors.xaml" />
       <File FileName="Quick Tasker/Pages/NewTask.xaml" />
-      <File FileName="Quick Tasker/Pages/NewTask.xaml.cs" Line="113" Column="1" />
-      <File FileName="Quick Tasker/Pages/AppShell.xaml" />
-      <File FileName="Quick Tasker/Pages/AppShell.xaml.cs" />
-      <File FileName="Quick Tasker/Pages/TaskBank.xaml.cs" Line="18" Column="6" />
-      <File FileName="Quick Tasker/Pages/Completed.xaml" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Pages/NewTask.xaml.cs" Line="118" Column="6" />
+      <File FileName="Quick Tasker/Pages/AppShell.xaml" Line="31" Column="28" />
+      <File FileName="Quick Tasker/Pages/AppShell.xaml.cs" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Pages/TaskBank.xaml.cs" Line="21" Column="37" />
+      <File FileName="Quick Tasker/Pages/Completed.xaml" Line="82" Column="65" />
       <File FileName="Quick Tasker/Pages/Completed.xaml.cs" Line="30" Column="1" />
-      <File FileName="Quick Tasker/Pages/Calendar.xaml" Line="12" Column="15" />
-      <File FileName="Quick Tasker/Pages/RecentlyDeleted.xaml" />
+      <File FileName="Quick Tasker/Pages/Calendar.xaml" Line="6" Column="1" />
       <File FileName="Quick Tasker/Pages/Calendar.xaml.cs" Line="1" Column="1" />
       <File FileName="Quick Tasker/Services/DatabaseService.cs" />
       <File FileName="Quick Tasker/Models/ObservableObject.cs" />
-      <File FileName="Quick Tasker/Models/Tasks.cs" Line="1" Column="1" />
-      <File FileName="Quick Tasker/ViewModels/TaskViewModel.cs" Line="58" Column="95" />
-      <File FileName="Quick Tasker/Pages/TaskBank.xaml" />
-      <File FileName="Quick Tasker/Pages/RecentlyDeleted.xaml.cs" Line="1" Column="1" />
-      <File FileName="Quick Tasker/Pages/TaskGenerator.xaml" Line="1" Column="1" />
-      <File FileName="Quick Tasker/Pages/TaskGenerator.xaml.cs" Line="22" Column="6" />
+      <File FileName="Quick Tasker/Models/Tasks.cs" />
+      <File FileName="Quick Tasker/ViewModels/TaskViewModel.cs" Line="98" Column="12" />
+      <File FileName="Quick Tasker/Pages/TaskBank.xaml" Line="11" Column="28" />
+      <File FileName="Quick Tasker/Pages/TaskGenerator.xaml" />
+      <File FileName="Quick Tasker/Pages/TaskGenerator.xaml.cs" Line="23" Column="49" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -43,11 +41,11 @@
             <Node name="Quick Tasker" expanded="True">
               <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
+                <Node name="AppShell.xaml" expanded="True" />
                 <Node name="Calendar.xaml" expanded="True" />
                 <Node name="Completed.xaml" expanded="True" />
                 <Node name="DailyView.xaml" expanded="True" />
                 <Node name="NewTask.xaml" expanded="True" />
-                <Node name="RecentlyDeleted.xaml" expanded="True" />
                 <Node name="TaskBank.xaml" expanded="True" />
                 <Node name="TaskGenerator.xaml" expanded="True" />
               </Node>

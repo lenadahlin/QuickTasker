@@ -2,11 +2,36 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Quick_Tasker.Pages.Calendar"
-             Title="Calendar">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Calendar"
+             BackgroundColor="#DCEDF9">
+            <Border StrokeShape="RoundRectangle"
+                BackgroundColor="#BDE0FE"
+                Margin="2"
+                Padding="3"
+                    VerticalOptions="Start">
+    <VerticalStackLayout BackgroundColor="White"
+                         Margin="2"
+                         VerticalOptions="Start"
+                         Padding="10">
+
+
+    <HorizontalStackLayout>
+        <!--Due Date-->
+        <Label
+            VerticalOptions="Center"
+            Text="Navigate to: "
+            FontAttributes="Bold"/>
+        <DatePicker
+            x:Name="AssignedDateEntry"
+            Format="dd/MM/yyyy"/>
+    </HorizontalStackLayout>
+
+                    <Button
+            x:Name="GoButton"
+            Text="Go"
+            Clicked="GoButton_Clicked"/>
+
+
+</VerticalStackLayout>
+                </Border>
 </ContentPage>

@@ -2,6 +2,7 @@
 namespace Quick_Tasker.Pages;
 using Quick_Tasker.Models;
 
+
 public partial class DailyView : ContentPage
 {
     private TaskViewModel viewModel;
@@ -29,6 +30,7 @@ public partial class DailyView : ContentPage
     {
         base.OnAppearing();
         DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
+
     }
     //updates item source and updates database when tasks are checked as completed
     private void CheckedComplete(object sender, CheckedChangedEventArgs e)
@@ -49,6 +51,7 @@ public partial class DailyView : ContentPage
                 task.CompletedDate = null;
                 viewModel.SaveTask(task);
                 DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
+
             }
         }
     }
