@@ -20,7 +20,7 @@ public partial class Completed : ContentPage
 
     private void CheckedComplete(object sender, CheckedChangedEventArgs e)
     {
- 
+
         if (sender is CheckBox checkBox && checkBox.BindingContext is Tasks task)
         {
             if (task.CompletedStatus && task.CompletedDate == null)

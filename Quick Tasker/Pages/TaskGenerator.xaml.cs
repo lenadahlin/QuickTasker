@@ -22,7 +22,9 @@ public partial class TaskGenerator : ContentPage
         AssignedDateEntry.Date = DateTime.Now;
         EstimatedTimeEntry.Time = TimeSpan.Zero;
     }
-
+    //Shake methods are from the link below
+    // https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device/sensors?tabs=android
+    // Referenced methods begin
     private void ToggleShakeOn()
     {
         if (Accelerometer.Default.IsSupported)
@@ -54,6 +56,7 @@ public partial class TaskGenerator : ContentPage
         shakeDetected = true;
 
     }
+    // Referenced methods end
 
     private async void GenerateButton_Clicked(System.Object sender, System.EventArgs e)
     {

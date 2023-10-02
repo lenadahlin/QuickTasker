@@ -4,77 +4,77 @@
              x:Class="Quick_Tasker.Pages.NewTask"
              Title="New Task"
              BackgroundColor="#DCEDF9">
-                <Border StrokeShape="RoundRectangle"
+    <Border StrokeShape="RoundRectangle"
                 BackgroundColor="#BDE0FE"
                 Margin="2"
                 Padding="3"
                     VerticalOptions="Start">
-    <VerticalStackLayout BackgroundColor="White"
+        <VerticalStackLayout BackgroundColor="White"
                          Margin="2"
                          VerticalOptions="Start"
                          Padding="10">
-        <!--Name-->
-        <Label
+            <!--Name-->
+            <Label
             VerticalOptions="Center"
             Text="Name:"
             FontAttributes="Bold"/>
-        <Entry
+            <Entry
             x:Name="NameEntry"
             BackgroundColor="White"
             Background="White"
             Placeholder="Name"/>
-        <HorizontalStackLayout>
-            <!--Due Date-->
-            <Label
+            <HorizontalStackLayout>
+                <!--Due Date-->
+                <Label
             VerticalOptions="Center"
             Text="Due Date:"
             FontAttributes="Bold"/>
-            <Switch
+                <Switch
             x:Name="DueDateSwitch"
             VerticalOptions="Center"
             Toggled="DueDateSwitch_Toggled"/>
-        </HorizontalStackLayout>
-        <DatePicker
+            </HorizontalStackLayout>
+            <DatePicker
             x:Name="DueDateEntry"
             Format="dd/MM/yyyy"
             IsEnabled="False"
             IsVisible="False"/>
-        <HorizontalStackLayout>
-            <!--Assigned Date-->
-            <Label
+            <HorizontalStackLayout>
+                <!--Assigned Date-->
+                <Label
             VerticalOptions="Center"
             Text="Assigned Date:"
             FontAttributes="Bold"/>
-            <Switch
+                <Switch
             x:Name="AssignedDateSwitch"
             VerticalOptions="Center"
             Toggled="AssignedDateSwitch_Toggled"/>
-        </HorizontalStackLayout>
-        <DatePicker
+            </HorizontalStackLayout>
+            <DatePicker
             x:Name="AssignedDateEntry"
             Format="dd/MM/yyyy"
             IsEnabled="False"
             IsVisible="False"/>
-        <HorizontalStackLayout>
-            <!--Assigned Date-->
-            <Label
+            <HorizontalStackLayout>
+                <!--Assigned Date-->
+                <Label
             VerticalOptions="Center"
             Text="Estimated Time:"
             FontAttributes="Bold"/>
-            <Switch
+                <Switch
             x:Name="EstimatedTimeSwitch"
             VerticalOptions="Center"
             Toggled="EstimatedTimeSwitch_Toggled"/>
-        </HorizontalStackLayout>
-        <TimePicker
+            </HorizontalStackLayout>
+            <TimePicker
             x:Name="EstimatedTimeEntry"
             Format="HH:mm"
             IsEnabled="False"
             IsVisible="False"/>
-        <Button
+            <Button
             x:Name="SaveButton"
             Text="Save"
             Clicked="SaveButton_Clicked"/>
-    </VerticalStackLayout>
-                    </Border>
+        </VerticalStackLayout>
+    </Border>
 </ContentPage>

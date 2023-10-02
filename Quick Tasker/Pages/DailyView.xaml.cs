@@ -16,6 +16,7 @@ public partial class DailyView : ContentPage
         Initialize(selectedDate);
     }
 
+    //initialize for specific date
     private void Initialize(DateTime selectedDate)
     {
         currentDate = selectedDate;
@@ -72,9 +73,9 @@ public partial class DailyView : ContentPage
         DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
     }
 
+    //swipe handler for increasing and decreasing dates
     void OnSwiped(object sender, SwipedEventArgs e)
     {
-
         if (e.Direction == SwipeDirection.Left)
         {
             currentDate = currentDate.AddDays(1);

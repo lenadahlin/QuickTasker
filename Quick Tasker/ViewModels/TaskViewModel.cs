@@ -12,7 +12,6 @@ namespace Quick_Tasker.ViewModels
 {
     internal class TaskViewModel
     {
-        //public event PropertyChangedEventHandler PropertyChanged;
         public static TaskViewModel Current { get; set; }
 
         SQLiteConnection connection;
@@ -31,7 +30,7 @@ namespace Quick_Tasker.ViewModels
             }
         }
 
-        //TODO have nulls at the end of the list
+        //for TaskBank list
         public List<Tasks> GetUncompletedTasks
         {
             get
@@ -40,6 +39,7 @@ namespace Quick_Tasker.ViewModels
 
             }
         }
+        //for Completed list
         public List<Tasks> GetCompletedTasks
         {
             get
@@ -48,6 +48,7 @@ namespace Quick_Tasker.ViewModels
 
             }
         }
+        //for DailyView list
         public List<Tasks> GetAssignedTasks(DateTime newDate)
         {
 
@@ -55,6 +56,7 @@ namespace Quick_Tasker.ViewModels
 
         }
 
+        //for TaskGenerator
         public Tasks GetRandomTask(TimeSpan timeAvailable, DateTime assignedDate)
         {
 
@@ -72,30 +74,6 @@ namespace Quick_Tasker.ViewModels
 
             return connection.Query<Tasks>(query, formattedTimeAvailable, assignedDate).FirstOrDefault();
         }
-        // Function to print all tasks in the database
-        //public void PrintAllTasks()
-        //{
-        //    List<Tasks> tasks = connection.Table<Tasks>().ToList();
-
-        //    if (tasks.Any())
-        //    {
-        //        foreach (var task in tasks)
-        //        {
-        //            Debug.WriteLine($"Task ID: {task.Id}");
-        //            Debug.WriteLine($"Name: {task.Name}");
-        //            Debug.WriteLine($"Due Date: {task.DueDate}");
-        //            Debug.WriteLine($"Assigned Date: {task.AssignedDate}");
-        //            Debug.WriteLine($"Estimated Time: {task.EstimatedTime}");
-        //            Debug.WriteLine($"Completed Date: {task.CompletedDate}");
-        //            Debug.WriteLine($"Completed Status: {task.CompletedStatus}");
-        //            Debug.WriteLine("------");
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Debug.WriteLine("No tasks found in the database.");
-        //    }
-        //}
 
         public void SaveTask(Tasks model)
         {
@@ -103,13 +81,11 @@ namespace Quick_Tasker.ViewModels
             if (model.Id > 0)
             {
                 connection.Update(model);
-                // PropertyChanged(this, new PropertyChangedEventArgs("Tasks"));
             }
             //If not, it's new and we need to add it
             else
             {
                 connection.Insert(model);
-                //  PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tasks"));
             }
         }
 

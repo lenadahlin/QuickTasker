@@ -12,7 +12,7 @@
         ContentTemplate="{DataTemplate local:DailyView}"
         Route="MainPage" />
     <FlyoutItem Title="New Task">
-    <ShellContent
+        <ShellContent
         Title="New Task"
         ContentTemplate="{DataTemplate local:NewTask}"
         Route="NewTask" />
@@ -29,7 +29,7 @@
         Title="Calendar"
         ContentTemplate="{DataTemplate local:Calendar}"
         Route="Calendar" />
-        <ShellContent
+    <ShellContent
         Title="Task Generator"
         ContentTemplate="{DataTemplate local:TaskGenerator}"
         Route="TaskGenerator" />

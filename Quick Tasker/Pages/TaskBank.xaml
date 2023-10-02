@@ -11,21 +11,19 @@
                 HasUnevenRows="True"
                 Margin="20"
                 HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand"
-            >
+                VerticalOptions="FillAndExpand">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <Grid>
                         <Border StrokeShape="RoundRectangle"
-                                                        BackgroundColor="#006DAA"
-                                                        Margin="2"
-                                                        Padding="3">
+                                BackgroundColor="#006DAA"
+                                Margin="2"
+                                Padding="3">
                             <Grid HorizontalOptions="FillAndExpand"
-                              VerticalOptions="FillAndExpand"
-                              BackgroundColor="White"
-                              Margin="2"
-                              >
+                                  VerticalOptions="FillAndExpand"
+                                  BackgroundColor="White"
+                                  Margin="2">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="auto"/>
@@ -103,7 +101,6 @@
                                     CheckedChanged="CheckedComplete"
                                     HorizontalOptions="End"
                                     VerticalOptions="Center"/>
-
                             </Grid>
                         </Border>
                     </Grid>

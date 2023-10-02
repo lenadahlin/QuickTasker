@@ -4,34 +4,29 @@
              x:Class="Quick_Tasker.Pages.Calendar"
              Title="Calendar"
              BackgroundColor="#DCEDF9">
-            <Border StrokeShape="RoundRectangle"
+    <Border StrokeShape="RoundRectangle"
                 BackgroundColor="#BDE0FE"
                 Margin="2"
                 Padding="3"
                     VerticalOptions="Start">
-    <VerticalStackLayout BackgroundColor="White"
+        <VerticalStackLayout BackgroundColor="White"
                          Margin="2"
                          VerticalOptions="Start"
                          Padding="10">
-
-
-    <HorizontalStackLayout>
-        <!--Due Date-->
-        <Label
+            <HorizontalStackLayout>
+                <Label
             VerticalOptions="Center"
             Text="Navigate to: "
             FontAttributes="Bold"/>
-        <DatePicker
+                <DatePicker
             x:Name="AssignedDateEntry"
             Format="dd/MM/yyyy"/>
-    </HorizontalStackLayout>
+            </HorizontalStackLayout>
 
-                    <Button
+            <Button
             x:Name="GoButton"
             Text="Go"
             Clicked="GoButton_Clicked"/>
-
-
-</VerticalStackLayout>
-                </Border>
+        </VerticalStackLayout>
+    </Border>
 </ContentPage>
