@@ -16,7 +16,7 @@
             <HorizontalStackLayout>
                 <Label
                     VerticalOptions="Center"
-                    Text="Date for tasks:"
+                    Text="Task Date:"
                     FontAttributes="Bold"/>
 
             </HorizontalStackLayout>

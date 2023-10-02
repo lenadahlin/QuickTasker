@@ -1,44 +1,41 @@
 ﻿<Properties StartupConfiguration="{5399F89B-0C23-44B3-8B45-C5BCA46583DF}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Quick Tasker/Pages/TaskBank.xaml">
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.68" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Quick Tasker/Pages/TaskGenerator.xaml">
     <Files>
-      <File FileName="Quick Tasker/MainPage.xaml.cs" />
-      <File FileName="Quick Tasker/MainPage.xaml" />
-      <File FileName="Quick Tasker/Pages/DailyView.xaml" Line="149" Column="73" />
-      <File FileName="Quick Tasker/Pages/DailyView.xaml.cs" />
-      <File FileName="Quick Tasker/App.xaml" />
-      <File FileName="Quick Tasker/App.xaml.cs" />
-      <File FileName="Quick Tasker/MauiProgram.cs" />
-      <File FileName="Quick Tasker/Helpers/FontAwesomeHelperSolid.cs" />
-      <File FileName="Quick Tasker/Resources/Styles/Styles.xaml" />
-      <File FileName="Quick Tasker/Resources/Styles/Colors.xaml" />
-      <File FileName="Quick Tasker/Pages/NewTask.xaml" />
-      <File FileName="Quick Tasker/Pages/NewTask.xaml.cs" Line="118" Column="6" />
-      <File FileName="Quick Tasker/Pages/AppShell.xaml" Line="31" Column="28" />
+      <File FileName="Quick Tasker/Pages/DailyView.xaml" Line="126" Column="66" />
+      <File FileName="Quick Tasker/Pages/TaskBank.xaml" Line="103" Column="63" />
+      <File FileName="Quick Tasker/Pages/NewTask.xaml" Line="17" Column="13" />
+      <File FileName="Quick Tasker/Pages/DailyView.xaml.cs" Line="4" Column="1" />
+      <File FileName="Quick Tasker/Pages/TaskBank.xaml.cs" Line="18" Column="66" />
+      <File FileName="Quick Tasker/Pages/AppShell.xaml" Line="1" Column="1" />
       <File FileName="Quick Tasker/Pages/AppShell.xaml.cs" Line="1" Column="1" />
-      <File FileName="Quick Tasker/Pages/TaskBank.xaml.cs" Line="21" Column="37" />
-      <File FileName="Quick Tasker/Pages/Completed.xaml" Line="82" Column="65" />
-      <File FileName="Quick Tasker/Pages/Completed.xaml.cs" Line="30" Column="1" />
-      <File FileName="Quick Tasker/Pages/Calendar.xaml" Line="6" Column="1" />
-      <File FileName="Quick Tasker/Pages/Calendar.xaml.cs" Line="1" Column="1" />
-      <File FileName="Quick Tasker/Services/DatabaseService.cs" />
-      <File FileName="Quick Tasker/Models/ObservableObject.cs" />
-      <File FileName="Quick Tasker/Models/Tasks.cs" />
-      <File FileName="Quick Tasker/ViewModels/TaskViewModel.cs" Line="98" Column="12" />
-      <File FileName="Quick Tasker/Pages/TaskBank.xaml" Line="11" Column="28" />
-      <File FileName="Quick Tasker/Pages/TaskGenerator.xaml" />
-      <File FileName="Quick Tasker/Pages/TaskGenerator.xaml.cs" Line="23" Column="49" />
+      <File FileName="Quick Tasker/Resources/Styles/Colors.xaml" Line="7" Column="35" />
+      <File FileName="Quick Tasker/Resources/Styles/Styles.xaml" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Resources/AppIcon/appicon.svg" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Resources/AppIcon/appiconfg.svg" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Pages/Completed.xaml" Line="23" Column="16" />
+      <File FileName="Quick Tasker/Pages/TaskGenerator.xaml" Line="15" Column="39" />
+      <File FileName="Quick Tasker/Pages/Calendar.xaml" Line="17" Column="34" />
+      <File FileName="Quick Tasker/Pages/Calendar.xaml.cs" Line="10" Column="3" />
+      <File FileName="Quick Tasker/Pages/NewTask.xaml.cs" Line="4" Column="1" />
+      <File FileName="Quick Tasker/Pages/TaskGenerator.xaml.cs" Line="57" Column="1" />
+      <File FileName="Quick Tasker/Pages/Completed.xaml.cs" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Helpers/FontAwesomeHelperSolid.cs" Line="1" Column="1" />
+      <File FileName="Quick Tasker/Models/ObservableObject.cs" Line="3" Column="1" />
+      <File FileName="Quick Tasker/Models/Tasks.cs" Line="13" Column="1" />
+      <File FileName="Quick Tasker/ViewModels/TaskViewModel.cs" Line="4" Column="1" />
+      <File FileName="Quick Tasker/App.xaml" Line="1" Column="1" />
+      <File FileName="Quick Tasker/MainPage.xaml" Line="1" Column="1" />
+      <File FileName="Quick Tasker/MainPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="Quick Tasker/MauiProgram.cs" Line="10" Column="75" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Quick Tasker" expanded="True">
-            <Node name="Quick Tasker" expanded="True">
+          <Node name="Quick Tasker">
+            <Node name="Quick Tasker">
+              <Node name="Helpers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
                 <Node name="AppShell.xaml" expanded="True" />
@@ -47,9 +44,10 @@
                 <Node name="DailyView.xaml" expanded="True" />
                 <Node name="NewTask.xaml" expanded="True" />
                 <Node name="TaskBank.xaml" expanded="True" />
-                <Node name="TaskGenerator.xaml" expanded="True" />
+                <Node name="TaskGenerator.xaml" expanded="True" selected="True" />
               </Node>
               <Node name="ViewModels" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
               <Node name="MainPage.xaml" expanded="True" />
             </Node>
           </Node>
@@ -58,6 +56,10 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Quick_220Tasker PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.68" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
