@@ -2,7 +2,6 @@
 namespace Quick_Tasker.Pages;
 using Quick_Tasker.Models;
 
-
 public partial class DailyView : ContentPage
 {
     private TaskViewModel viewModel;

@@ -1,10 +1,7 @@
-﻿namespace Quick_Tasker.Pages;
-using System.Diagnostics;
-using System.Threading.Tasks;
-using Quick_Tasker.Models;
+﻿using Quick_Tasker.Models;
 using Quick_Tasker.ViewModels;
 
-
+namespace Quick_Tasker.Pages;
 public partial class TaskGenerator : ContentPage
 {
     private readonly TaskViewModel viewModel;

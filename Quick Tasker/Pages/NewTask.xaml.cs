@@ -1,7 +1,7 @@
 ﻿namespace Quick_Tasker.Pages;
 using Quick_Tasker.ViewModels;
 using Quick_Tasker.Models;
-using AndroidX.Lifecycle;
+
 
 public partial class NewTask : ContentPage
 {

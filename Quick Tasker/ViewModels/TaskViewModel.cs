@@ -1,12 +1,7 @@
 ﻿using Quick_Tasker.Models;
 using Quick_Tasker.Services;
-using System.ComponentModel;
 using SQLite;
-using Android.Graphics;
-using System.Diagnostics;
-using static Android.App.DownloadManager;
-using System.Globalization;
-using Microsoft.VisualBasic;
+
 
 namespace Quick_Tasker.ViewModels
 {
@@ -59,10 +54,6 @@ namespace Quick_Tasker.ViewModels
         //for TaskGenerator
         public Tasks GetRandomTask(TimeSpan timeAvailable, DateTime assignedDate)
         {
-
-            //format time to be the same format as db
-            string formattedTimeAvailable = timeAvailable.ToString(@"hh\:mm\:ss");
-            Debug.WriteLine("Formatted time available: " + formattedTimeAvailable);
             string query = @"
             SELECT * FROM Tasks
             WHERE EstimatedTime <= ? 
@@ -70,9 +61,7 @@ namespace Quick_Tasker.ViewModels
             AND CompletedDate IS NULL 
             AND (DueDate IS NULL OR DueDate >= ?)
             ORDER BY RANDOM() LIMIT 1";
-
-
-            return connection.Query<Tasks>(query, formattedTimeAvailable, assignedDate).FirstOrDefault();
+            return connection.Query<Tasks>(query, timeAvailable, assignedDate).FirstOrDefault();
         }
 
         public void SaveTask(Tasks model)

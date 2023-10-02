@@ -1,5 +1,4 @@
-﻿using AndroidX.Lifecycle;
-using Quick_Tasker.ViewModels;
+﻿using Quick_Tasker.ViewModels;
 using Quick_Tasker.Models;
 namespace Quick_Tasker.Pages;
 
