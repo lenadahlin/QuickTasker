@@ -13,8 +13,4 @@ public partial class Calendar : ContentPage
     {
         await Navigation.PushAsync(new DailyView((DateTime)e.NewValue));
     }
-
-
-    
-
 }

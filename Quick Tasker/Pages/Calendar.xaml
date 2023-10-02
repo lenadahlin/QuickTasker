@@ -14,7 +14,9 @@
                          Margin="2"
                          VerticalOptions="Start"
                          Padding="10">
-            <calendar:SfCalendar SelectionChanged="OnCalendarSelectionChanged"/>
+            <calendar:SfCalendar SelectionChanged="OnCalendarSelectionChanged"
+                                 SelectionBackground="#0353a4"
+                                 TodayHighlightBrush="#0353a4"/>
         </VerticalStackLayout>
     </Border>
 </ContentPage>
