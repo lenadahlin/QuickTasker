@@ -35,9 +35,11 @@
 
                                 <VerticalStackLayout HorizontalOptions="FillAndExpand"
                                                  Padding="5">
+                                    <!--Name-->
                                     <Label Grid.Column="0"
                                     Text="{Binding Name}"
                                     FontAttributes="Bold"/>
+                                    <!--Due Date-->
                                     <Label Grid.Column="0">
                                         <Label.Triggers>
                                             <DataTrigger TargetType="Label" Binding="{Binding FormattedDueDate}" Value="">
@@ -52,7 +54,7 @@
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
-
+                                    <!--Assigned Date-->
                                     <Label Grid.Column="0">
                                         <Label.Triggers>
                                             <DataTrigger TargetType="Label" Binding="{Binding FormattedAssignedDate}" Value="">
@@ -67,6 +69,7 @@
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
+                                    <!--Estimated Time-->
                                     <Label Grid.Column="0">
                                         <Label.Triggers>
                                             <DataTrigger TargetType="Label" Binding="{Binding FormattedEstimatedTime}" Value="">
@@ -81,6 +84,7 @@
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
+                                    <!--Completed Date-->
                                     <Label Grid.Column="0">
                                         <Label.Triggers>
                                             <DataTrigger TargetType="Label" Binding="{Binding FormattedCompletedDate}" Value="">
@@ -96,7 +100,7 @@
                                         </Label.FormattedText>
                                     </Label>
                                 </VerticalStackLayout>
-                                <!-- buttons -->
+                                <!--Buttons-->
                                 <HorizontalStackLayout Grid.Column="1">
                                     <ImageButton Grid.Column="1"
                                     x:Name="EditButton"

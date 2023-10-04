@@ -5,16 +5,15 @@
              Title="Edit Task"
              BackgroundColor="#DCEDF9">
     <Border StrokeShape="RoundRectangle"
-                BackgroundColor="#BDE0FE"
-                Margin="2"
-                Padding="3"
-                    VerticalOptions="Start">
+            BackgroundColor="#BDE0FE"
+            Margin="2"
+            Padding="3"
+            VerticalOptions="Start">
         <VerticalStackLayout x:Name="StackView"
-            BackgroundColor="White"
-                         Margin="2"
-                         VerticalOptions="Start"
-                         Padding="10"
-                             BindingContext="{Binding GetTaskById}">
+                             BackgroundColor="White"
+                             Margin="2"
+                             VerticalOptions="Start"
+                             Padding="10">
             <!--Name-->
             <Label
             VerticalOptions="Center"
@@ -73,7 +72,7 @@
             IsEnabled="False"
             IsVisible="False"/>
             <HorizontalStackLayout>
-                <!--Assigned Date-->
+                <!--Completed` Date-->
                 <Label
             VerticalOptions="Center"
             Text="Completed Date:"
@@ -88,37 +87,26 @@
             Format="dd/MM/yyyy"
             IsEnabled="False"
             IsVisible="False"/>
-
+            <!--Buttons-->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
+                <Button
+                    x:Name="DeleteButton"
+                    Text="Delete"
+                    Clicked="DeleteButton_Clicked"
+                    HorizontalOptions="Start"/>
+                <Button
+                    x:Name="UpdateButton"
+                    Text="Update"
+                    Clicked="UpdateButton_Clicked"
+                    HorizontalOptions="End"/>
             </Grid>
-            <HorizontalStackLayout Grid.Column="0"
-                                   Grid.Row="0">
-                <Button
-            x:Name="DeleteButton"
-            Text="Delete"
-            Clicked="DeleteButton_Clicked"
-                                HorizontalOptions="Start"/>
-
-            </HorizontalStackLayout>
-
-            <HorizontalStackLayout Grid.Column="1"
-                       Grid.Row="0">
-                <Button
-            x:Name="UpdateButton"
-            Text="Update"
-            Clicked="UpdateButton_Clicked"
-                HorizontalOptions="End"/>
-            </HorizontalStackLayout>
-
-
         </VerticalStackLayout>
     </Border>
 </ContentPage>

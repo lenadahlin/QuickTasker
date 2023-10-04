@@ -178,5 +178,3 @@ public partial class EditTask : ContentPage
         }
     }
 }
-
-// TODO fix xaml buttons so they align 
