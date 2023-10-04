@@ -6,6 +6,8 @@
         //All icons are from FASolid
         public const string ArrowLeft = "\u2190";
         public const string ArrowRight = "\u2192";
+        public const string Pencil = "\u270f";
+
     }
 }
 

@@ -5,13 +5,10 @@ public partial class App : Application
 {
 	public App()
 	{
-        //Register Syncfusion license
-		//TODO Update key with community license when received
-        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NHaF5cXmVCf1NpTHxbf1xzZFxMZFtbRXJPMyBoS35RdURjWX1eeXBSR2RZVUJz");
+        //Register Syncfusion license with key
+        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NHaF5cXmVCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdgWH9edHRTQ2NYVkN1WUE=");
         InitializeComponent();
 		MainPage = new AppShell();
-
-		//MainPage = new NavigationPage(new DailyView());
 	}
 }
 

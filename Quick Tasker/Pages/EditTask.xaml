@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quick_Tasker.Pages.EditTask"
+             Title="Edit Task"
+             BackgroundColor="#DCEDF9">
+    <Border StrokeShape="RoundRectangle"
+                BackgroundColor="#BDE0FE"
+                Margin="2"
+                Padding="3"
+                    VerticalOptions="Start">
+        <VerticalStackLayout x:Name="StackView"
+            BackgroundColor="White"
+                         Margin="2"
+                         VerticalOptions="Start"
+                         Padding="10"
+                             BindingContext="{Binding GetTaskById}">
+            <!--Name-->
+            <Label
+            VerticalOptions="Center"
+            Text="Name: "
+            FontAttributes="Bold"/>
+            <Entry
+            x:Name="NameEntry"
+            BackgroundColor="White"
+            Background="White"/>
+            <HorizontalStackLayout>
+                <!--Due Date-->
+                <Label
+            VerticalOptions="Center"
+            Text="Due Date:"
+            FontAttributes="Bold"/>
+                <Switch
+            x:Name="DueDateSwitch"
+            VerticalOptions="Center"
+            Toggled="DueDateSwitch_Toggled"/>
+            </HorizontalStackLayout>
+            <DatePicker
+            x:Name="DueDateEntry"
+            Format="dd/MM/yyyy"
+            IsEnabled="False"
+            IsVisible="False"/>
+            <HorizontalStackLayout>
+                <!--Assigned Date-->
+                <Label
+            VerticalOptions="Center"
+            Text="Assigned Date:"
+            FontAttributes="Bold"/>
+                <Switch
+            x:Name="AssignedDateSwitch"
+            VerticalOptions="Center"
+            Toggled="AssignedDateSwitch_Toggled"/>
+            </HorizontalStackLayout>
+            <DatePicker
+            x:Name="AssignedDateEntry"
+            Format="dd/MM/yyyy"
+            IsEnabled="False"
+            IsVisible="False"/>
+            <HorizontalStackLayout>
+                <!--Estimated Time-->
+                <Label
+            VerticalOptions="Center"
+            Text="Estimated Time:"
+            FontAttributes="Bold"/>
+                <Switch
+            x:Name="EstimatedTimeSwitch"
+            VerticalOptions="Center"
+            Toggled="EstimatedTimeSwitch_Toggled"/>
+            </HorizontalStackLayout>
+            <TimePicker
+            x:Name="EstimatedTimeEntry"
+            Format="HH:mm"
+            IsEnabled="False"
+            IsVisible="False"/>
+            <HorizontalStackLayout>
+                <!--Assigned Date-->
+                <Label
+            VerticalOptions="Center"
+            Text="Completed Date:"
+            FontAttributes="Bold"/>
+                <Switch
+            x:Name="CompletedDateSwitch"
+            VerticalOptions="Center"
+            Toggled="CompletedDateSwitch_Toggled"/>
+            </HorizontalStackLayout>
+            <DatePicker
+            x:Name="CompletedDateEntry"
+            Format="dd/MM/yyyy"
+            IsEnabled="False"
+            IsVisible="False"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+            </Grid>
+            <HorizontalStackLayout Grid.Column="0"
+                                   Grid.Row="0">
+                <Button
+            x:Name="DeleteButton"
+            Text="Delete"
+            Clicked="DeleteButton_Clicked"
+                                HorizontalOptions="Start"/>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Grid.Column="1"
+                       Grid.Row="0">
+                <Button
+            x:Name="UpdateButton"
+            Text="Update"
+            Clicked="UpdateButton_Clicked"
+                HorizontalOptions="End"/>
+            </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+    </Border>
+</ContentPage>

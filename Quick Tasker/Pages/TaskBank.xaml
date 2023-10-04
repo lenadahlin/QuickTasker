@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Quick_Tasker.Pages.TaskBank"
+             xmlns:helper="clr-namespace:Quick_Tasker.Helpers"
              Title="Task Bank"
              BackgroundColor="#DCEDF9">
     <ListView
@@ -95,12 +96,26 @@
                                         </Label.FormattedText>
                                     </Label>
                                 </VerticalStackLayout>
-                                <CheckBox Grid.Column="1"
+                                <!-- buttons -->
+                                <HorizontalStackLayout Grid.Column="1">
+                                    <ImageButton Grid.Column="1"
+                                    x:Name="EditButton"
+                                    Clicked="EditButton_Clicked"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Center"
+                                    Rotation="135"
+                                    Scale="0.7">
+                                        <ImageButton.Source>
+                                            <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.Pencil}" Color="#0353a4"  />
+                                        </ImageButton.Source>
+                                    </ImageButton>
+                                    <CheckBox Grid.Column="1"
                                     x:Name="CompletedBox"
                                     IsChecked="{Binding CompletedStatus}"
                                     CheckedChanged="CheckedComplete"
                                     HorizontalOptions="End"
                                     VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
                             </Grid>
                         </Border>
                     </Grid>

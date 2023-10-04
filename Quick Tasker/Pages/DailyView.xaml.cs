@@ -90,4 +90,12 @@ public partial class DailyView : ContentPage
             DailyListView.ItemsSource = viewModel.GetAssignedTasks(currentDate);
         }
     }
+
+    private void EditButton_Clicked(System.Object sender, System.EventArgs e)
+    {
+        if (sender is ImageButton imgButton && imgButton.BindingContext is Tasks task)
+        {
+            Navigation.PushAsync(new EditTask((task)));
+        }
+    }
 }

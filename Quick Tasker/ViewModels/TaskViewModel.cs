@@ -51,6 +51,7 @@ namespace Quick_Tasker.ViewModels
 
         }
 
+
         //for TaskGenerator
         public Tasks GetRandomTask(TimeSpan timeAvailable, DateTime assignedDate)
         {
@@ -62,6 +63,11 @@ namespace Quick_Tasker.ViewModels
             AND (DueDate IS NULL OR DueDate >= ?)
             ORDER BY RANDOM() LIMIT 1";
             return connection.Query<Tasks>(query, timeAvailable, assignedDate).FirstOrDefault();
+        }
+        //for editting
+        public Tasks GetTaskById(int taskId)
+        {
+            return connection.Table<Tasks>().FirstOrDefault(task => task.Id == taskId);
         }
 
         public void SaveTask(Tasks model)

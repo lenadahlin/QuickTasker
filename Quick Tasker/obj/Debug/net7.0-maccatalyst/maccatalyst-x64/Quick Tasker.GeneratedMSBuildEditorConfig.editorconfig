@@ -46,6 +46,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.DailyVi
 build_metadata.AdditionalFiles.TargetPath = Pages/DailyView.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/DailyView.xaml
 
+[/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Pages/EditTask.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.EditTask.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/EditTask.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/EditTask.xaml
+
 [/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Pages/NewTask.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Quick_Tasker.Pages.NewTask.xaml
