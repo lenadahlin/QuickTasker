@@ -88,7 +88,7 @@
             IsEnabled="False"
             IsVisible="False"/>
             <!--Buttons-->
-            <Grid>
+            <Grid Margin="15">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>
