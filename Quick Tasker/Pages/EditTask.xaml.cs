@@ -63,11 +63,13 @@ public partial class EditTask : ContentPage
             CompletedDateEntry.IsVisible = false;
             CompletedDateSwitch.IsToggled = false;
         }
-
-
-
-        //public DateTime? CompletedDate { get; set; }
-        //public bool CompletedStatus { get; set; }
+        else if (taskForEdit.CompletedDate != null)
+        {
+            CompletedDateEntry.Date = (DateTime)task.CompletedDate;
+            CompletedDateEntry.IsEnabled = true;
+            CompletedDateEntry.IsVisible = true;
+            CompletedDateSwitch.IsToggled = true;
+        }
     }
     //Task information toggles
     private void DueDateSwitch_Toggled(object sender, ToggledEventArgs e)
