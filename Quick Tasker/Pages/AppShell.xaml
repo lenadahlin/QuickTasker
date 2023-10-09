@@ -5,27 +5,31 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Quick_Tasker.Pages"
+    xmlns:helper="clr-namespace:Quick_Tasker.Helpers"
     Shell.FlyoutBehavior="Flyout">
 
     <Shell.FlyoutHeader>
-       <HorizontalStackLayout>
-           <Label
+        <HorizontalStackLayout>
+            <Image VerticalOptions="Start"
+                         HorizontalOptions="Start"
+                              Rotation="45"
+                              Scale="0.9">
+                <Image.Source>
+                    <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.Pencil}" Color="#1F487E" />
+                </Image.Source>
+            </Image>
+            <Label
                FontSize="Large"
                FontAttributes="Bold"
                HorizontalOptions="CenterAndExpand"
-               TextColor="Black">
-               <Label.FormattedText>
-                   <FormattedString>
-                       <Span Text="Quick Tasker"/>
-
-                   </FormattedString>
-
-               </Label.FormattedText>
-
-           </Label>
-
-       </HorizontalStackLayout> 
-
+               TextColor="#1F487E">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Quick Tasker"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </HorizontalStackLayout>
     </Shell.FlyoutHeader>
     <ShellContent
         Title="Daily View"
