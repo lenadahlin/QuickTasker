@@ -16,6 +16,8 @@ public partial class TaskBank : ContentPage
     {
         base.OnAppearing();
         TaskBankView.ItemsSource = viewModel.GetUncompletedTasks;
+        //TODO delete debug
+        viewModel.PrintAllTasks();
     }
 
     private void CheckedComplete(object sender, CheckedChangedEventArgs e)
