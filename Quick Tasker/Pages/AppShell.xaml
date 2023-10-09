@@ -7,6 +7,26 @@
     xmlns:local="clr-namespace:Quick_Tasker.Pages"
     Shell.FlyoutBehavior="Flyout">
 
+    <Shell.FlyoutHeader>
+       <HorizontalStackLayout>
+           <Label
+               FontSize="Large"
+               FontAttributes="Bold"
+               HorizontalOptions="CenterAndExpand"
+               TextColor="Black">
+               <Label.FormattedText>
+                   <FormattedString>
+                       <Span Text="Quick Tasker"/>
+
+                   </FormattedString>
+
+               </Label.FormattedText>
+
+           </Label>
+
+       </HorizontalStackLayout> 
+
+    </Shell.FlyoutHeader>
     <ShellContent
         Title="Daily View"
         ContentTemplate="{DataTemplate local:DailyView}"
