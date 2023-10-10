@@ -34,7 +34,9 @@
                          x:Name="Left"
                          VerticalOptions="Start"
                          HorizontalOptions="Start"
-                         Clicked="DecreaseDate">
+                         Clicked="DecreaseDate"
+                         Scale="2"
+                         Margin="20, 0, 0, 0">
                 <ImageButton.Source>
                     <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.ArrowLeft}" Color="Black" />
                 </ImageButton.Source>
@@ -57,7 +59,9 @@
                 x:Name="Right"
                 VerticalOptions="Start"
                 HorizontalOptions="End"
-                Clicked="IncreaseDate">
+                Clicked="IncreaseDate"
+                Scale="2"
+                Margin="0, 0, 20, 0">
                 <ImageButton.Source>
                     <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.ArrowRight}" Color="Black" />
                 </ImageButton.Source>
