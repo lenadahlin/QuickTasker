@@ -35,12 +35,9 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
-
-		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
@@ -68,6 +65,9 @@
 	  <None Remove="Models\" />
 	  <None Remove="Services\" />
 	  <None Remove="ViewModels\" />
+	  <None Remove="Resources\Splash\QuickTaskerLogo.svg" />
+	  <None Remove="Resources\AppIcon\appiconfg.svg" />
+	  <None Remove="Resources\AppIcon\appiconfg.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Pages\" />
@@ -81,5 +81,9 @@
 	  <BundleResource Include="Resources\Fonts\FontAwesomeSolid.otf" />
 	  <BundleResource Include="Resources\Fonts\FontAwesomeRegular.otf" />
 	  <BundleResource Include="Resources\Fonts\FontAwesomeBrands.otf" />
+	  <BundleResource Include="Resources\AppIcon\appiconfg.svg" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#FFFFFF" />
 	</ItemGroup>
 </Project>

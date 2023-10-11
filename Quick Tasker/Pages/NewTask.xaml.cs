@@ -71,7 +71,7 @@ public partial class NewTask : ContentPage
         }
 
         //check if empty
-        if ((string.IsNullOrEmpty(NameEntry.Text) || NameEntry.Text.Length < 1))
+        if (string.IsNullOrEmpty(NameEntry.Text) || NameEntry.Text.Length < 1 || string.IsNullOrWhiteSpace(NameEntry.Text))
         {
             await DisplayAlert("Warning", "Tasks must have a name", "OK");
             return;

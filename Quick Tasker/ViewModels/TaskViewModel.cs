@@ -49,8 +49,7 @@ namespace Quick_Tasker.ViewModels
         public List<Tasks> GetAssignedTasks(DateTime newDate)
         {
 
-            return connection.Table<Tasks>().Where(task => task.AssignedDate == newDate).OrderBy(x => x.Name).ToList();
-
+            return connection.Table<Tasks>().Where(task => task.AssignedDate == newDate).OrderBy(x => x.CompletedDate).ToList();
         }
 
 
@@ -99,31 +98,6 @@ namespace Quick_Tasker.ViewModels
         internal void SaveTask(Task newTask)
         {
             throw new NotImplementedException();
-        }
-        //Function to print all tasks in the database
-        //TODO delete debug
-        public void PrintAllTasks()
-        {
-            List<Tasks> tasks = connection.Table<Tasks>().ToList();
-
-            if (tasks.Any())
-            {
-                foreach (var task in tasks)
-                {
-                    Debug.WriteLine($"Task ID: {task.Id}");
-                    Debug.WriteLine($"Name: {task.Name}");
-                    Debug.WriteLine($"Due Date: {task.DueDate}");
-                    Debug.WriteLine($"Assigned Date: {task.AssignedDate}");
-                    Debug.WriteLine($"Estimated Time: {task.EstimatedTime}");
-                    Debug.WriteLine($"Completed Date: {task.CompletedDate}");
-                    Debug.WriteLine($"Completed Status: {task.CompletedStatus}");
-                    Debug.WriteLine("------");
-                }
-            }
-            else
-            {
-                Debug.WriteLine("No tasks found in the database.");
-            }
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/nmxf/yA6z+CVwwfjAllQMdsmh0NU8+CqusjTs4U7ejr9qJ5e4hU+ogMVAyTaEr6sqs9+A/hI6SiQRC4KKYC1Q==",
+  "dgSpecHash": "gLVxXbFt3PoEfX47A0z4bMjtaptcudJLO6UTCwKHzhFyeNYa4ZimkPG7Gfe1Tl0ze0O7TxoaNnEpJ7MgetAFxg==",
   "success": true,
   "projectFilePath": "/Users/lenadahlin/code/INFT2051/Quick Tasker/Quick Tasker/Quick Tasker.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,7 @@
     "/Users/lenadahlin/.nuget/packages/microsoft.extensions.logging.debug/7.0.0/microsoft.extensions.logging.debug.7.0.0.nupkg.sha512",
     "/Users/lenadahlin/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/Users/lenadahlin/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
-    "/Users/lenadahlin/.nuget/packages/microsoft.maui.graphics/7.0.92/microsoft.maui.graphics.7.0.92.nupkg.sha512",
+    "/Users/lenadahlin/.nuget/packages/microsoft.maui.graphics/7.0.96/microsoft.maui.graphics.7.0.96.nupkg.sha512",
     "/Users/lenadahlin/.nuget/packages/sqlite/3.13.0/sqlite.3.13.0.nupkg.sha512",
     "/Users/lenadahlin/.nuget/packages/sqlite-net-pcl/1.8.116/sqlite-net-pcl.1.8.116.nupkg.sha512",
     "/Users/lenadahlin/.nuget/packages/sqlitepclraw.bundle_green/2.0.4/sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",

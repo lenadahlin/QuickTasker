@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{28093C75-B683-4401-8DAD-1C8252D43816}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../usr/local/share/dotnet/packs/Microsoft.iOS.Sdk/16.4.7107/tools/msbuild/iOS/Xamarin.Shared.targets">
+    <Files>
+      <File FileName="Quick Tasker.sln" Line="1" Column="1" />
+      <File FileName="Resources/Splash/splash.svg" />
+      <File FileName="Quick Tasker.csproj" Line="84" Column="76" />
+      <File FileName="../../../../../../usr/local/share/dotnet/packs/Microsoft.iOS.Sdk/16.4.7107/tools/msbuild/iOS/Xamarin.Shared.targets" Line="1746" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Quick Tasker" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Quick_220Tasker PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+</Properties>
