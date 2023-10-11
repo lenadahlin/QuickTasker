@@ -5,126 +5,156 @@
              xmlns:helper="clr-namespace:Quick_Tasker.Helpers"
              Title="Task Bank"
              BackgroundColor="#DCEDF9">
-    <ListView
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Border StrokeShape="RoundRectangle"
+                                BackgroundColor="#006DAA"
+                                Margin="2"
+                                Padding="3">
+            <Grid HorizontalOptions="FillAndExpand"
+                                  VerticalOptions="FillAndExpand"
+                                  BackgroundColor="White"
+                                  Margin="2">
+                <Picker x:Name="Picker"
+                        Title="Filter By"
+                        Margin="0">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Not Completed (Default)</x:String>
+                            <x:String>No Due Date</x:String>
+                            <x:String>Not Assigned</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Grid>
+        </Border>
+
+
+        <ListView
                 x:Name="TaskBankView"
                 SelectionMode="None"
                 ItemsSource="{Binding GetUncompletedTasks}"
                 HasUnevenRows="True"
                 Margin="20"
                 HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <Grid>
-                        <Border StrokeShape="RoundRectangle"
+                VerticalOptions="FillAndExpand"
+        Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Border StrokeShape="RoundRectangle"
                                 BackgroundColor="#006DAA"
                                 Margin="2"
                                 Padding="3">
-                            <Grid HorizontalOptions="FillAndExpand"
+                                <Grid HorizontalOptions="FillAndExpand"
                                   VerticalOptions="FillAndExpand"
                                   BackgroundColor="White"
                                   Margin="2">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto"/>
-                                </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
 
-                                <VerticalStackLayout HorizontalOptions="FillAndExpand"
+                                    <VerticalStackLayout HorizontalOptions="FillAndExpand"
                                                  Padding="5">
-                                    <!--Name-->
-                                    <Label Grid.Column="0"
+                                        <!--Name-->
+                                        <Label Grid.Column="0"
                                     Text="{Binding Name}"
                                     FontAttributes="Bold"/>
-                                    <!--Due Date-->
-                                    <Label Grid.Column="0">
-                                        <Label.Triggers>
-                                            <DataTrigger TargetType="Label" Binding="{Binding FormattedDueDate}" Value="">
-                                                <Setter Property="IsVisible" Value="false"/>
-                                            </DataTrigger>
-                                        </Label.Triggers>
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text ="Due: "
+                                        <!--Due Date-->
+                                        <Label Grid.Column="0">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label" Binding="{Binding FormattedDueDate}" Value="">
+                                                    <Setter Property="IsVisible" Value="false"/>
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text ="Due: "
                                                   FontAttributes="Bold" />
-                                                <Span Text="{Binding FormattedDueDate}"/>
-                                            </FormattedString>
-                                        </Label.FormattedText>
-                                    </Label>
-                                    <!--Assigned Date-->
-                                    <Label Grid.Column="0">
-                                        <Label.Triggers>
-                                            <DataTrigger TargetType="Label" Binding="{Binding FormattedAssignedDate}" Value="">
-                                                <Setter Property="IsVisible" Value="false"/>
-                                            </DataTrigger>
-                                        </Label.Triggers>
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text ="Assigned: "
+                                                    <Span Text="{Binding FormattedDueDate}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <!--Assigned Date-->
+                                        <Label Grid.Column="0">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label" Binding="{Binding FormattedAssignedDate}" Value="">
+                                                    <Setter Property="IsVisible" Value="false"/>
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text ="Assigned: "
                                                   FontAttributes="Bold" />
-                                                <Span Text="{Binding FormattedAssignedDate}"/>
-                                            </FormattedString>
-                                        </Label.FormattedText>
-                                    </Label>
-                                    <!--Estimated Time-->
-                                    <Label Grid.Column="0">
-                                        <Label.Triggers>
-                                            <DataTrigger TargetType="Label" Binding="{Binding FormattedEstimatedTime}" Value="">
-                                                <Setter Property="IsVisible" Value="false"/>
-                                            </DataTrigger>
-                                        </Label.Triggers>
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text ="Estimated Time: "
+                                                    <Span Text="{Binding FormattedAssignedDate}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <!--Estimated Time-->
+                                        <Label Grid.Column="0">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label" Binding="{Binding FormattedEstimatedTime}" Value="">
+                                                    <Setter Property="IsVisible" Value="false"/>
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text ="Estimated Time: "
                                                   FontAttributes="Bold" />
-                                                <Span Text="{Binding FormattedEstimatedTime}"/>
-                                            </FormattedString>
-                                        </Label.FormattedText>
-                                    </Label>
-                                    <!--Completed Date-->
-                                    <Label Grid.Column="0">
-                                        <Label.Triggers>
-                                            <DataTrigger TargetType="Label" Binding="{Binding FormattedCompletedDate}" Value="">
-                                                <Setter Property="IsVisible" Value="false"/>
-                                            </DataTrigger>
-                                        </Label.Triggers>
-                                        <Label.FormattedText>
-                                            <FormattedString>
-                                                <Span Text ="Completed:"
+                                                    <Span Text="{Binding FormattedEstimatedTime}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <!--Completed Date-->
+                                        <Label Grid.Column="0">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label" Binding="{Binding FormattedCompletedDate}" Value="">
+                                                    <Setter Property="IsVisible" Value="false"/>
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text ="Completed:"
                                                   FontAttributes="Bold" />
-                                                <Span Text="{Binding FormattedCompletedDate}"/>
-                                            </FormattedString>
-                                        </Label.FormattedText>
-                                    </Label>
-                                </VerticalStackLayout>
-                                <!--Buttons-->
-                                <HorizontalStackLayout Grid.Column="1">
-                                    <ImageButton Grid.Column="1"
+                                                    <Span Text="{Binding FormattedCompletedDate}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </VerticalStackLayout>
+                                    <!--Buttons-->
+                                    <HorizontalStackLayout Grid.Column="1">
+                                        <ImageButton Grid.Column="1"
                                     x:Name="EditButton"
                                     Clicked="EditButton_Clicked"
                                     HorizontalOptions="End"
                                     VerticalOptions="Center"
                                     Rotation="135"
                                     Scale="0.7">
-                                        <ImageButton.Source>
-                                            <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.Pencil}" Color="#0353a4"  />
-                                        </ImageButton.Source>
-                                    </ImageButton>
-                                    <CheckBox Grid.Column="1"
+                                            <ImageButton.Source>
+                                                <FontImageSource FontFamily="FASolid" Glyph="{x:Static helper:FontAwesomeHelperSolid.Pencil}" Color="#0353a4"  />
+                                            </ImageButton.Source>
+                                        </ImageButton>
+                                        <CheckBox Grid.Column="1"
                                     x:Name="CompletedBox"
                                     IsChecked="{Binding CompletedStatus}"
                                     CheckedChanged="CheckedComplete"
                                     HorizontalOptions="End"
                                     VerticalOptions="Center"/>
-                                </HorizontalStackLayout>
-                            </Grid>
-                        </Border>
-                    </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                                    </HorizontalStackLayout>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>

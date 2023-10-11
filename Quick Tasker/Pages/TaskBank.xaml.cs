@@ -1,5 +1,6 @@
 ﻿using Quick_Tasker.ViewModels;
 using Quick_Tasker.Models;
+using static Android.Provider.ContactsContract.CommonDataKinds;
 
 namespace Quick_Tasker.Pages;
 
@@ -44,6 +45,17 @@ public partial class TaskBank : ContentPage
         if (sender is ImageButton imgButton && imgButton.BindingContext is Tasks task)
         {
             Navigation.PushAsync(new EditTask((task)));
+        }
+    }
+
+    private void OnPickerSelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (Picker.SelectedIndex == 0)
+        {
+            TaskBankView.ItemsSource = viewModel.GetUncompletedTasks;
+        } else if (Picker.SelectedIndex == 1)
+        {
+            TaskBankView.ItemsSource = viewModel.GetUnassignedTasks;
         }
     }
 }

@@ -1,25 +1,39 @@
 ﻿<Properties StartupConfiguration="{28093C75-B683-4401-8DAD-1C8252D43816}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../usr/local/share/dotnet/packs/Microsoft.iOS.Sdk/16.4.7107/tools/msbuild/iOS/Xamarin.Shared.targets">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Quick Tasker.csproj">
     <Files>
-      <File FileName="Quick Tasker.sln" Line="1" Column="1" />
-      <File FileName="Resources/Splash/splash.svg" />
-      <File FileName="Quick Tasker.csproj" Line="84" Column="76" />
+      <File FileName="Quick Tasker.sln" />
+      <File FileName="Resources/Splash/splash.svg" Line="1" Column="1" />
+      <File FileName="Quick Tasker.csproj" Line="25" Column="37" />
       <File FileName="../../../../../../usr/local/share/dotnet/packs/Microsoft.iOS.Sdk/16.4.7107/tools/msbuild/iOS/Xamarin.Shared.targets" Line="1746" Column="3" />
+      <File FileName="App.xaml" Line="1" Column="1" />
+      <File FileName="Resources/Styles/Colors.xaml" Line="7" Column="28" />
+      <File FileName="Resources/AppIcon/appicon.svg" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Quick Tasker" expanded="True" />
+          <Node name="Quick Tasker" selected="True">
+            <Node name="Quick Tasker">
+              <Node name="Resources">
+                <Node name="AppIcon" expanded="True" />
+                <Node name="Splash" expanded="True" />
+                <Node name="Styles" expanded="True" />
+              </Node>
+              <Node name="ViewModels" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Quick_220Tasker PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.ItemProperties.Quick_220Tasker PreferredExecutionTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.95" />
 </Properties>

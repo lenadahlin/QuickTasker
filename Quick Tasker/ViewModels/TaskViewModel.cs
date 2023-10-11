@@ -36,6 +36,15 @@ namespace Quick_Tasker.ViewModels
 
             }
         }
+        //for TaskBank filter
+        public List<Tasks> GetUnassignedTasks
+        {
+            get
+            {
+                return connection.Table<Tasks>().Where(task => task.DueDate == null).OrderBy(x => x.Name).ToList();
+
+            }
+        }
         //for Completed list
         public List<Tasks> GetCompletedTasks
         {
