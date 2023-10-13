@@ -55,6 +55,9 @@ public partial class TaskBank : ContentPage
             TaskBankView.ItemsSource = viewModel.GetUncompletedTasks;
         } else if (Picker.SelectedIndex == 1)
         {
+            TaskBankView.ItemsSource = viewModel.GetNoDueDateTasks;
+        } else if (Picker.SelectedIndex == 2)
+        {
             TaskBankView.ItemsSource = viewModel.GetUnassignedTasks;
         }
     }

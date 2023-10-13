@@ -41,8 +41,15 @@ namespace Quick_Tasker.ViewModels
         {
             get
             {
-                return connection.Table<Tasks>().Where(task => task.DueDate == null).OrderBy(x => x.Name).ToList();
-
+                return connection.Table<Tasks>().Where(task => task.AssignedDate == null && task.CompletedDate == null).OrderBy(x => x.Name).ToList();
+            }
+        }
+        //for TaskBank filter
+        public List<Tasks> GetNoDueDateTasks
+        {
+            get
+            {
+                return connection.Table<Tasks>().Where(task => task.DueDate == null && task.CompletedDate == null).OrderBy(x => x.Name).ToList();
             }
         }
         //for Completed list
