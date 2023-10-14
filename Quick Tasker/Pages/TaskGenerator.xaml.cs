@@ -82,7 +82,7 @@ public partial class TaskGenerator : ContentPage
             while (true)
             {
                 BindingContext = randomTask;
-                string taskInfo = "Task Name: " + randomTask.Name + "\nEstimated Time: " + randomTask.EstimatedTime;
+                string taskInfo = "Task Name: " + randomTask.Name + "\nEstimated Time: " + randomTask.FormattedEstimatedTime;
                 string action = await DisplayActionSheet(taskInfo, "Cancel", null, "Assign Task", "Generate Again");
                 if (action == "Generate Again" || shakeDetected)
                 {
