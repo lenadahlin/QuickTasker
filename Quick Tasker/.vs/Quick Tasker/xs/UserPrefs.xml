@@ -2,35 +2,45 @@
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.95" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/TaskBank.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ViewModels/TaskViewModel.cs">
     <Files>
       <File FileName="Quick Tasker.sln" />
       <File FileName="Resources/Splash/splash.svg" />
-      <File FileName="Quick Tasker.csproj" Line="25" Column="37" />
+      <File FileName="Quick Tasker.csproj" />
       <File FileName="../../../../../../usr/local/share/dotnet/packs/Microsoft.iOS.Sdk/16.4.7107/tools/msbuild/iOS/Xamarin.Shared.targets" />
       <File FileName="App.xaml" />
       <File FileName="Resources/Styles/Colors.xaml" />
       <File FileName="Resources/AppIcon/appicon.svg" />
-      <File FileName="Pages/TaskBank.xaml" Line="26" Column="62" />
-      <File FileName="Helpers/FontAwesomeHelperSolid.cs" Line="9" Column="47" />
-      <File FileName="Pages/TaskGenerator.xaml" Line="1" Column="1" />
-      <File FileName="Pages/NewTask.xaml" Line="1" Column="1" />
-      <File FileName="Pages/AppShell.xaml" Line="1" Column="1" />
+      <File FileName="Pages/TaskBank.xaml" Line="35" Column="18" />
+      <File FileName="Helpers/FontAwesomeHelperSolid.cs" />
+      <File FileName="Pages/TaskGenerator.xaml" />
+      <File FileName="Pages/NewTask.xaml" />
+      <File FileName="Pages/AppShell.xaml" />
       <File FileName="Pages/DailyView.xaml" Line="22" Column="1" />
-      <File FileName="Pages/EditTask.xaml" Line="1" Column="1" />
-      <File FileName="Pages/TaskBank.xaml.cs" Line="62" Column="1" />
-      <File FileName="ViewModels/TaskViewModel.cs" Line="44" Column="105" />
+      <File FileName="Pages/EditTask.xaml" />
+      <File FileName="Pages/TaskBank.xaml.cs" Line="62" Column="10" />
+      <File FileName="ViewModels/TaskViewModel.cs" Line="52" Column="76" />
+      <File FileName="Pages/DailyView.xaml.cs" />
+      <File FileName="MainPage.xaml" />
+      <File FileName="Pages/Calendar.xaml.cs" />
+      <File FileName="Pages/AppShell.xaml.cs" />
+      <File FileName="MauiProgram.cs" />
+      <File FileName="Pages/TaskGenerator.xaml.cs" />
+      <File FileName="Pages/Calendar.xaml" />
+      <File FileName="Pages/Completed.xaml" />
+      <File FileName="Properties/launchSettings.json" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Quick Tasker">
             <Node name="Quick Tasker" expanded="True">
-              <Node name="Helpers" expanded="True" />
               <Node name="Pages" expanded="True">
                 <Node name="TaskBank.xaml" expanded="True" />
               </Node>
-              <Node name="ViewModels" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="TaskViewModel.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

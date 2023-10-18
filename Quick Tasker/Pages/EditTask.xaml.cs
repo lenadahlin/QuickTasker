@@ -154,7 +154,7 @@ public partial class EditTask : ContentPage
             await DisplayAlert("Warning", "Assigned date must be after the due date", "OK");
             return;
         }
-        if (AssignedDateEntry.Date < DateTime.Today || DueDateEntry.Date < DateTime.Today)
+        if (AssignedDateSwitch.IsToggled == true && AssignedDateEntry.Date < DateTime.Today || DueDateSwitch.IsToggled == true && DueDateEntry.Date < DateTime.Today)
         {
             await DisplayAlert("Warning", "Dates must be on or after today", "OK");
             return;
